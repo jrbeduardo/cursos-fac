@@ -1,0 +1,464 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{fontawesome5}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{parskip}
+
+% Page layout
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=3cm,
+    bottom=3cm,
+    headheight=14pt
+}
+
+% Actualización de la paleta de colores
+% Colores institucionales UNAM
+\definecolor{primarycolor}{HTML}{002B7A} % Azul UNAM
+\definecolor{secondarycolor}{HTML}{2F4C85} % Azul medio UNAM
+\definecolor{accentcolor}{HTML}{D59F0F} % Oro UNAM
+\definecolor{textcolor}{HTML}{333333} % Gris oscuro profesional
+\definecolor{neutralcolor}{HTML}{666666} % Gris medio
+
+% Hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primarycolor,
+    urlcolor=primarycolor,
+    citecolor=primarycolor
+}
+
+% Section formatting
+\titleformat{\section}
+{\color{primarycolor}\Large\bfseries}
+{}{0em}{}[\vspace{2pt}\titlerule]
+
+\titleformat{\subsection}
+{\color{secondarycolor}\large\bfseries}
+{}{0em}{}
+
+\titleformat{\subsubsection}
+{\color{secondarycolor}\normalsize\bfseries}
+{}{0em}{}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{secondarycolor}{Modelos de Lenguaje Grande (LLMs)}}
+\fancyhead[R]{\small\textcolor{secondarycolor}{Proyecto I}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Custom boxes
+\newtcolorbox{objectivebox}{
+    colback=neutralcolor!10, % Fondo gris claro derivado del neutro
+    colframe=primarycolor, % Borde azul UNAM
+    arc=3mm,
+    boxrule=1pt,
+    left=5pt,
+    right=5pt,
+    top=5pt,
+    bottom=5pt
+}
+
+\newtcolorbox{infobox}[1]{
+    colback=neutralcolor!10, % Fondo gris claro derivado del neutro
+    colframe=accentcolor, % Borde oro UNAM
+    arc=2mm,
+    boxrule=1pt,
+    title=#1,
+    fonttitle=\bfseries,
+    left=5pt,
+    right=5pt,
+    top=5pt,
+    bottom=5pt
+}
+
+\renewcommand{\rmdefault}{lmr} % Fuente por defecto
+\color{textcolor} % Aplicar gris oscuro profesional al texto principal
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+\includegraphics[width=0.2\textwidth]{Escudo-facultad-ciencias-unam.png}\\[1cm]
+\color{primarycolor}\rule{\linewidth}{1mm}\\[0.5cm]
+\Huge\textbf{Temario del Curso}\\[0.5cm]
+\Large\textbf{Introducción a los Large Language Models}\\[0.5cm]
+\color{primarycolor}\rule{\linewidth}{1mm}\\[1cm]
+\Large\textbf{Universidad Nacional Autónoma de México}\\[0.5cm]
+\Large\textbf{Facultad de Ciencias}\\[0.5cm]
+\Large\textbf{Materia: Proyecto I}\\[0.5cm]
+\Large\textbf{Carrera: Matemáticas Aplicadas (Plan 2017)}\\[0.5cm]
+\begin{tcolorbox}[colback=neutralcolor!10, colframe=primarycolor, arc=2mm, boxrule=0.5pt, left=5pt, right=5pt, top=5pt, bottom=5pt]
+    \small
+    \textbf{Grupo:} 6012\\
+    \textbf{Modalidad:} Presencial\\
+    \textbf{Horario:} Lunes a Viernes, 17:00 a 18:00\\
+    \textbf{Profesor:} Francisco Pérez Carbajal\\
+    \textbf{Ayudante:} José Eduardo Rodríguez Barrios
+\end{tcolorbox}
+\end{center}
+\end{titlepage}
+
+\thispagestyle{empty}
+\newpage
+
+\setcounter{page}{1}
+
+% Content
+\section{Objetivo del Seminario-Taller}
+
+\begin{objectivebox}
+Este seminario-taller tiene como propósito que los estudiantes \textbf{desarrollen un proyecto de titulación} en el área de modelos de lenguaje grande (LLMs), integrando fundamentos teóricos con aplicaciones prácticas. El curso busca fomentar una comprensión profunda de los LLMs, desde su arquitectura hasta su implementación en tareas específicas.
+
+A través de la lectura crítica de artículos científicos, la síntesis de conocimiento especializado y el desarrollo práctico de un proyecto, los estudiantes:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Explorarán} el estado del arte en modelos de lenguaje, desde enfoques neuronales iniciales hasta los LLMs contemporáneos.
+    \item \textbf{Diseñarán e implementarán} un proyecto aplicado que resuelva una tarea específica (clasificación, generación, resumen, o chatbot).
+    \item \textbf{Desarrollarán} una solución integral, desde la preparación del corpus hasta el despliegue del modelo.
+    \item \textbf{Experimentarán} con arquitecturas avanzadas y técnicas de ajuste eficiente (LoRA, QLoRA, PEFT).
+    \item \textbf{Documentarán} su trabajo con rigor técnico y científico, siguiendo estándares académicos.
+    \item \textbf{Presentarán} sus avances y resultados de manera profesional, con énfasis en la comunicación efectiva.
+\end{itemize}
+\end{objectivebox}
+
+\vspace{0.5cm}
+
+\subsection{Alcance y Enfoque}
+
+Este curso cubre el \textbf{espectro completo de los modelos modernos de lenguaje}:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Transformers y Arquitectura Base:} mecanismos de atención, embeddings y entrenamiento auto-supervisado
+    \item \textbf{Modelos fundacionales:} BERT, GPT, T5, LLaMA, Falcon, Mistral
+    \item \textbf{Fine-tuning eficiente:} LoRA, QLoRA, prompt-tuning, adapters
+    \item \textbf{Evaluación y fairness:} métricas de desempeño, sesgos y responsabilidad ética
+    \item \textbf{Aplicaciones:} chatbots, clasificación, resumen, generación de texto y RAG (Retrieval-Augmented Generation)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection{Formato del Curso}
+
+El curso se estructura como un \textbf{seminario-taller interactivo}, donde:
+\begin{itemize}[leftmargin=*]
+    \item Los estudiantes analizan y presentan artículos científicos clave, fomentando el pensamiento crítico.
+    \item Se realizan discusiones grupales para conectar conceptos teóricos con aplicaciones prácticas.
+    \item Cada estudiante desarrolla un proyecto individual, con mentoría personalizada en cada fase.
+    \item Las sesiones incluyen retroalimentación continua para garantizar el progreso del proyecto.
+    \item El proyecto final se diseña para ser un trabajo de titulación, con estándares de calidad académica.
+\end{itemize}
+
+\section{Pre-requisitos}
+
+Para un aprovechamiento óptimo del curso, se requiere que los participantes cumplan con los siguientes requisitos:
+
+\subsection{Conocimientos Matemáticos}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Álgebra lineal:} vectores, matrices y transformaciones lineales
+    \item \textbf{Probabilidad y estadística:} nociones básicas
+    \item \textbf{Conocimientos de regresión logística y aprendizaje de máquina:} deseable
+\end{itemize}
+
+\subsection{Habilidades Técnicas}
+\begin{itemize}[leftmargin=*]
+    \item Capacidad para leer artículos técnicos en inglés
+    \item Programación en Python
+    \item Familiaridad con herramientas como PyTorch, Hugging Face Transformers, y GitHub
+\end{itemize}
+
+\subsection{Herramientas de Apoyo}
+\begin{itemize}[leftmargin=*]
+    \item Aula virtual (Google Classroom)
+    \item Repositorio individual en GitHub para código y reportes
+\end{itemize}
+
+\newpage
+
+\section{Estructura del Seminario-Taller}
+
+El seminario-taller se organiza en cuatro fases, integrando teoría y práctica de manera progresiva:
+
+\subsection{Fase 1: Fundamentos y Estado del Arte (Semanas 1--4)}
+
+\textbf{Objetivo:} Comprender los principios fundamentales de los LLMs y su evolución histórica.
+\begin{itemize}[leftmargin=*]
+    \item Lectura y análisis de papers seminales: \textit{Attention is All You Need} (Vaswani et al., 2017), \textit{BERT} (Devlin et al., 2019), \textit{GPT} (Brown et al., 2020).
+    \item Elaboración de fichas bibliográficas y mapas conceptuales para sintetizar el conocimiento.
+    \item Discusión sobre capacidades emergentes en LLMs a gran escala (Zhao et al., 2023).
+\end{itemize}
+
+\textbf{Desarrollo del proyecto:}
+\begin{itemize}[leftmargin=*]
+    \item Definición del problema y tarea lingüística (clasificación, QA, resumen, etc.).
+    \item Recolección y exploración del corpus de texto.
+    \item Configuración del entorno de desarrollo (Python + Hugging Face).
+    \item Establecimiento de baselines con modelos preentrenados.
+\end{itemize}
+
+\subsection{Fase 2: Procesamiento, Fine-tuning y Experimentación (Semanas 5--8)}
+
+\textbf{Objetivo:} Implementar y experimentar con técnicas avanzadas de ajuste eficiente.
+\begin{itemize}[leftmargin=*]
+    \item Lectura y análisis de técnicas de tokenización y fine-tuning (LoRA, QLoRA, adapters).
+    \item Implementación del pipeline de entrenamiento y experimentación con modelos recientes (LLaMA, Falcon, Mistral).
+    \item Uso de herramientas de MLOps para el seguimiento de experimentos.
+\end{itemize}
+
+\textbf{Desarrollo del proyecto:}
+\begin{itemize}[leftmargin=*]
+    \item Comparación de arquitecturas y técnicas de ajuste eficiente.
+    \item Documentación de resultados y análisis crítico de experimentos.
+\end{itemize}
+
+\subsection{Fase 3: Evaluación, Interpretabilidad y Fairness (Semanas 9--12)}
+
+\textbf{Lecturas y síntesis:}
+\begin{itemize}[leftmargin=*]
+    \item Métricas: perplejidad, BLEU, ROUGE, F1, exactitud
+    \item Interpretabilidad: visualización de atención y saliency maps
+    \item Fairness y ética: sesgos en LLMs (Gallegos et al., 2023), alucinaciones (Huang et al., 2024) y uso responsable
+    \item Análisis de robustez y generalización en diferentes dominios
+\end{itemize}
+
+\textbf{Desarrollo del proyecto:}
+\begin{itemize}[leftmargin=*]
+    \item Evaluación cuantitativa y cualitativa del modelo
+    \item Análisis de errores y diagnóstico
+    \item Estudio de sesgos y robustez del modelo
+    \item Implementación de técnicas de interpretabilidad
+    \item Comparación con baselines y modelos del estado del arte
+\end{itemize}
+
+\subsection{Fase 4: Deployment, Documentación y Presentación (Semanas 13--16)}
+
+\textbf{Lecturas y síntesis:}
+\begin{itemize}[leftmargin=*]
+    \item Despliegue de modelos: APIs con FastAPI, Streamlit o Gradio
+    \item Técnicas de optimización y compresión (quantization, pruning)
+    \item Casos de estudio: RAG (Lewis et al., 2020), agentes y pipelines de inferencia
+    \item Consideraciones éticas y sostenibilidad de los LLMs
+\end{itemize}
+
+\textbf{Desarrollo del proyecto:}
+\begin{itemize}[leftmargin=*]
+    \item Selección y optimización del modelo final
+    \item Implementación de un demo funcional (API/chatbot/app)
+    \item Aplicación de técnicas de compresión y optimización
+    \item Elaboración del reporte técnico (formato de tesis, 50--80 páginas)
+    \item Presentación final y defensa del proyecto ante el grupo
+\end{itemize}
+
+\newpage
+
+\section{Evaluación del Seminario-Taller}
+
+La evaluación se centra en el \textbf{desarrollo integral del proyecto de titulación} y la \textbf{apropiación de conocimiento} a través de actividades prácticas y teóricas.
+
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|c|X|c|}
+\hline
+\rowcolor{primarycolor}
+\textcolor{white}{\textbf{Actividad}} & \textcolor{white}{\textbf{Fase}} & \textcolor{white}{\textbf{Descripción}} & \textcolor{white}{\textbf{\%}} \\
+\hline
+\textbf{Presentaciones de Papers} & 1--4 &
+Análisis crítico y síntesis de artículos relevantes, conectando conceptos teóricos con el proyecto. & 20\% \\
+\hline
+\textbf{Avances del Proyecto} & 1--4 &
+Entregas parciales: definición del problema, implementación baseline, experimentación y despliegue. & 30\% \\
+\hline
+\textbf{Documentación Técnica} & 1--4 &
+Reporte progresivo con estructura de tesis, incluyendo metodología, experimentos y análisis. & 20\% \\
+\hline
+\textbf{Proyecto Final} & 4 &
+Producto funcional completo: modelo entrenado, sistema desplegado y presentación profesional. & 30\% \\
+\hline
+\end{tabularx}
+\caption{Distribución de la evaluación del seminario-taller}
+\end{table}
+
+\vspace{0.5cm}
+
+\begin{infobox}{Componentes del Proyecto de Titulación}
+El proyecto final debe ser un trabajo completo y de calidad suficiente para servir como tesis, incluyendo:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Revisión bibliográfica} exhaustiva del estado del arte en LLMs
+    \item \textbf{Planteamiento del problema} específico en procesamiento de lenguaje natural
+    \item \textbf{Metodología} detallada incluyendo preprocesamiento, arquitectura y fine-tuning
+    \item \textbf{Implementación} completa y reproducible (repositorio GitHub documentado)
+    \item \textbf{Experimentación} rigurosa comparando diferentes enfoques y técnicas
+    \item \textbf{Evaluación} completa incluyendo métricas, interpretabilidad y análisis de sesgos
+    \item \textbf{Sistema desplegado} funcional (API, chatbot o aplicación web)
+    \item \textbf{Documentación técnica} completa con formato de tesis (50--80 páginas)
+    \item \textbf{Análisis ético} y consideraciones de uso responsable
+\end{enumerate}
+\end{infobox}
+
+\subsection{Criterios de Evaluación Específicos}
+
+\textbf{Para Presentaciones de Papers:}
+\begin{itemize}[leftmargin=*]
+    \item Comprensión profunda de conceptos técnicos y matemáticos
+    \item Capacidad de síntesis y explicación clara de metodologías complejas
+    \item Análisis crítico de fortalezas, limitaciones y contribuciones
+    \item Conexión efectiva con el estado del arte y proyecto personal
+    \item Participación activa en discusiones técnicas
+\end{itemize}
+
+\textbf{Para el Proyecto:}
+\begin{itemize}[leftmargin=*]
+    \item Rigor metodológico en experimentación y evaluación
+    \item Implementación técnica correcta y eficiente
+    \item Originalidad en el planteamiento o enfoque del problema
+    \item Calidad de la documentación técnica y reproducibilidad
+    \item Análisis crítico de resultados y comparación con literatura
+\end{itemize}
+
+\subsection{Políticas del Seminario-Taller}
+\begin{itemize}[leftmargin=*]
+    \item La calificación mínima aprobatoria es de 60\%
+    \item Se requiere asistencia mínima del 80\% y participación activa
+    \item Los avances deben entregarse en las fechas establecidas
+    \item El proyecto es individual, aunque se fomenta la discusión colaborativa
+    \item Cada estudiante debe mantener un repositorio de GitHub actualizado
+    \item Las presentaciones de papers son obligatorias y se asignan rotativamente
+    \item Se espera honestidad académica; el plagio resultará en reprobación automática
+\end{itemize}
+
+\newpage
+
+\section{Bibliografía}
+
+\subsection{Artículos Científicos Fundamentales}
+
+\subsubsection{Arquitecturas Fundacionales}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Vaswani, A., et al.} (2017). \textit{Attention is All You Need.} NeurIPS.\\
+    \textcolor{secondarycolor}{\small Paper fundamental que introduce la arquitectura Transformer basada únicamente en mecanismos de atención.}
+
+    \item \textbf{Devlin, J., et al.} (2019). \textit{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding.} NAACL.\\
+    \textcolor{secondarycolor}{\small Modelo bidireccional que revoluciona la comprensión de texto mediante pre-entrenamiento masivo.}
+
+    \item \textbf{Brown, T., et al.} (2020). \textit{Language Models are Few-Shot Learners.} NeurIPS.\\
+    \textcolor{secondarycolor}{\small GPT-3 con 175B parámetros demuestra capacidades de few-shot learning sin fine-tuning adicional.}
+
+    \item \textbf{Raffel, C., et al.} (2020). \textit{Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer.} JMLR.\\
+    \textcolor{secondarycolor}{\small T5 unifica todas las tareas de NLP como problemas texto-a-texto.}
+\end{enumerate}
+
+\subsubsection{Modelos Fundacionales Recientes}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Touvron, H., et al.} (2023). \textit{LLaMA: Open and Efficient Foundation Language Models.} arXiv.\\
+    \textcolor{secondarycolor}{\small Familia de modelos abiertos (7B-65B) que compite con modelos propietarios más grandes.}
+
+    \item \textbf{Almazrouei, E., et al.} (2023). \textit{The Falcon Series of Open Language Models.} arXiv.\\
+    \textcolor{secondarycolor}{\small Modelos Falcon entrenados en datos curados con rendimiento competitivo y licencia abierta.}
+
+    \item \textbf{Jiang, A. Q., et al.} (2023). \textit{Mistral 7B.} arXiv.\\
+    \textcolor{secondarycolor}{\small Modelo de 7B parámetros con innovaciones arquitectónicas que supera a modelos más grandes.}
+\end{enumerate}
+
+\subsubsection{Técnicas de Fine-tuning Eficiente}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Hu, E. J., et al.} (2021). \textit{LoRA: Low-Rank Adaptation of Large Language Models.} ICLR.\\
+    \textcolor{secondarycolor}{\small Técnica de adaptación de bajo rango que reduce drásticamente parámetros entrenables.}
+
+    \item \textbf{Dettmers, T., et al.} (2023). \textit{QLoRA: Efficient Finetuning of Quantized LLMs.} arXiv.\\
+    \textcolor{secondarycolor}{\small Combina quantización 4-bit con LoRA para fine-tuning eficiente en hardware limitado.}
+
+    \item \textbf{Li, X. L., \& Liang, P.} (2021). \textit{Prefix-Tuning: Optimizing Continuous Prompts for Generation.} ACL.\\
+    \textcolor{secondarycolor}{\small Método que optimiza vectores de prefijo continuos manteniendo parámetros del modelo fijos.}
+
+    \item \textbf{Houlsby, N., et al.} (2019). \textit{Parameter-Efficient Transfer Learning for NLP.} ICML.\\
+    \textcolor{secondarycolor}{\small Introducción de adapters como módulos ligeros insertados entre capas del modelo.}
+\end{enumerate}
+
+\subsubsection{Evaluación, Interpretabilidad y Ética}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Zhao, W. X., et al.} (2023). \textit{A Survey of Large Language Models.} arXiv.\\
+    \textcolor{secondarycolor}{\small Revisión comprehensiva del estado del arte, capacidades emergentes y desafíos de los LLMs.}
+
+    \item \textbf{Gallegos, I. O., et al.} (2023). \textit{Bias and Fairness in Large Language Models: A Survey.} arXiv.\\
+    \textcolor{secondarycolor}{\small Análisis exhaustivo de sesgos en LLMs y métodos de evaluación y mitigación.}
+
+    \item \textbf{Huang, L., et al.} (2024). \textit{A Survey on Hallucination in Large Language Models.} arXiv.\\
+    \textcolor{secondarycolor}{\small Estudio sistemático del problema de alucinaciones y estrategias de mitigación.}
+\end{enumerate}
+
+\subsubsection{Aplicaciones Avanzadas}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Lewis, P., et al.} (2020). \textit{Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks.} NeurIPS.\\
+    \textcolor{secondarycolor}{\small RAG combina generación con recuperación de información para mejorar factualidad.}
+
+    \item \textbf{Sennrich, R., et al.} (2016). \textit{Neural Machine Translation of Rare Words with Subword Units.} ACL.\\
+    \textcolor{secondarycolor}{\small Introducción del algoritmo BPE para manejo de vocabulario abierto en NLP.}
+\end{enumerate}
+
+\subsection{Libros de Texto y Referencias}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Tunstall, L., von Werra, L., \& Wolf, T.} (2022). \textit{Natural Language Processing with Transformers.} O'Reilly.\\
+    \textcolor{secondarycolor}{\small Guía práctica para implementación de Transformers con Hugging Face.}
+
+    \item \textbf{Jurafsky, D., \& Martin, J.} (2023). \textit{Speech and Language Processing (3rd ed. draft).} Stanford University.\\
+    \textcolor{secondarycolor}{\small Texto fundamental de procesamiento de lenguaje natural.}
+
+    \item \textbf{Goodfellow, I., Bengio, Y., \& Courville, A.} (2016). \textit{Deep Learning.} MIT Press.\\
+    \textcolor{secondarycolor}{\small Referencia fundamental sobre deep learning (disponible en línea).}
+\end{enumerate}
+
+\subsection{Recursos Técnicos y Documentación}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Hugging Face Transformers Documentation:} \url{https://huggingface.co/docs/transformers/}\\
+    \textcolor{secondarycolor}{\small Documentación oficial de la biblioteca más utilizada para LLMs.}
+
+    \item \textbf{Papers with Code -- NLP Section:} \href{https://paperswithcode.com/area/natural-language-processing}{https://paperswithcode.com/area/natural-language-processing}\\
+    \textcolor{secondarycolor}{\small Plataforma con papers, implementaciones y benchmarks actualizados.}
+
+    \item \textbf{arXiv sections:} cs.CL (Computation and Language), cs.LG (Machine Learning)\\
+    \textcolor{secondarycolor}{\small Repositorio de preprints con los avances más recientes en el campo.}
+
+    \item \textbf{OpenAI Research:} \url{https://openai.com/research/}\\
+    \textcolor{secondarycolor}{\small Publicaciones y avances de uno de los laboratorios líderes en LLMs.}
+\end{enumerate}
+
+\subsection{Recursos de Implementación}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{PyTorch Documentation:} \url{https://pytorch.org/docs/stable/index.html}
+    \item \textbf{Weights \& Biases:} \url{https://wandb.ai/} (Para experiment tracking)
+    \item \textbf{MLflow:} \url{https://mlflow.org/} (Plataforma MLOps alternativa)
+    \item \textbf{FastAPI:} \url{https://fastapi.tiangolo.com/} (Para APIs de despliegue)
+    \item \textbf{Gradio:} \url{https://gradio.app/} (Para interfaces de usuario rápidas)
+\end{enumerate}
+
+\end{document}

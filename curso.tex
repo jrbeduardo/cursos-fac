@@ -1,0 +1,500 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{fontawesome5}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{parskip}
+
+% Page layout
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=3cm,
+    bottom=3cm,
+    headheight=14pt
+}
+
+% Colors
+% Actualización de la paleta de colores
+% Colores institucionales UNAM
+\definecolor{primarycolor}{HTML}{002B7A} % Azul UNAM
+\definecolor{secondarycolor}{HTML}{2F4C85} % Azul medio UNAM
+\definecolor{accentcolor}{HTML}{D59F0F} % Oro UNAM
+\definecolor{textcolor}{HTML}{333333} % Gris oscuro profesional
+\definecolor{neutralcolor}{HTML}{666666} % Gris medio
+
+% Hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primarycolor,
+    urlcolor=primarycolor,
+    citecolor=primarycolor
+}
+
+% Section formatting
+\titleformat{\section}
+{\color{primarycolor}\Large\bfseries}
+{}{0em}{}[\vspace{2pt}\titlerule]
+
+\titleformat{\subsection}
+{\color{secondarycolor}\large\bfseries}
+{}{0em}{}
+
+\titleformat{\subsubsection}
+{\color{secondarycolor}\normalsize\bfseries}
+{}{0em}{}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{secondarycolor}{Modelos de Lenguaje Grande (LLMs)}}
+\fancyhead[R]{\small\textcolor{secondarycolor}{Proyecto I}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Custom boxes
+\newtcolorbox{objectivebox}{
+    colback=neutralcolor!10, % Fondo gris claro derivado del neutro
+    colframe=primarycolor, % Borde azul UNAM
+    arc=3mm,
+    boxrule=1pt,
+    left=5pt,
+    right=5pt,
+    top=5pt,
+    bottom=5pt
+}
+
+\newtcolorbox{infobox}[1]{
+    colback=neutralcolor!10, % Fondo gris claro derivado del neutro
+    colframe=accentcolor, % Borde oro UNAM
+    arc=2mm,
+    boxrule=1pt,
+    title=#1,
+    fonttitle=\bfseries,
+    left=5pt,
+    right=5pt,
+    top=5pt,
+    bottom=5pt
+}
+
+\renewcommand{\rmdefault}{lmr} % Fuente por defecto
+\color{textcolor} % Aplicar gris oscuro profesional al texto principal
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+\includegraphics[width=0.2\textwidth]{Escudo-facultad-ciencias-unam.png}\\[1cm]
+\color{primarycolor}\rule{\linewidth}{1mm}\\[0.5cm]
+\Huge\textbf{Temario del Curso}\\[0.5cm]
+\Large\textbf{Clasificador de imágenes con redes neuronales}\\[0.5cm]
+\color{primarycolor}\rule{\linewidth}{1mm}\\[1cm]
+\Large\textbf{Universidad Nacional Autónoma de México}\\[0.5cm]
+\Large\textbf{Facultad de Ciencias}\\[0.5cm]
+\Large\textbf{Materia: Proyecto I}\\[0.5cm]
+\Large\textbf{Carrera: Matemáticas Aplicadas (Plan 2017)}\\[0.5cm]
+\begin{tcolorbox}[colback=neutralcolor!10, colframe=primarycolor, arc=2mm, boxrule=0.5pt, left=5pt, right=5pt, top=5pt, bottom=5pt]
+    \small
+    \textbf{Grupo:} 6013\\
+    \textbf{Modalidad:} Presencial\\
+    \textbf{Horario:} Lunes a Viernes, 17:00 a 18:00\\
+    \textbf{Profesor:} José Eduardo Rodríguez Barrios\\
+    \textbf{Ayudante:} Francisco Pérez Carbajal
+\end{tcolorbox}
+\end{center}
+\end{titlepage}
+
+\thispagestyle{empty}
+\newpage
+
+\setcounter{page}{1}
+
+% Content
+\section*{\faIcon{bullseye} Objetivo del Seminario-Taller}
+\addcontentsline{toc}{section}{Objetivo del Seminario-Taller}
+
+\begin{objectivebox}
+Este seminario-taller tiene como objetivo que los estudiantes \textbf{desarrollen un proyecto de titulación} en el área de aprendizaje profundo aplicado a la visión por computadora, explorando tanto arquitecturas convolucionales clásicas (CNNs) como modelos modernos basados en atención (Vision Transformers) y enfoques multimodales.
+
+A través de la lectura, síntesis y apropiación de conocimiento de artículos científicos y textos especializados, combinado con el desarrollo práctico de un proyecto, los estudiantes:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Investigarán y sintetizarán} el estado del arte en modelos de aprendizaje profundo para visión por computadora, desde CNNs hasta Vision Transformers y modelos fundacionales
+    \item \textbf{Desarrollarán} un proyecto completo de clasificación de imágenes que pueda servir como trabajo de titulación
+    \item \textbf{Implementarán} una solución end-to-end: desde el procesamiento de datos hasta el despliegue
+    \item \textbf{Experimentarán} con diferentes arquitecturas (CNNs, ViTs, modelos híbridos) para comparar rendimiento y eficiencia
+    \item \textbf{Documentarán} su trabajo con rigor académico y técnico
+    \item \textbf{Presentarán} sus avances y resultados de forma profesional
+\end{itemize}
+\end{objectivebox}
+
+\vspace{0.5cm}
+
+\subsection*{Alcance y Enfoque}
+\vspace{-0.3cm}
+
+Este curso cubre el \textbf{espectro completo de arquitecturas modernas} para visión por computadora:
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Redes Neuronales Convolucionales (CNNs):} Desde arquitecturas fundacionales (LeNet, AlexNet, ResNet) hasta modelos eficientes (EfficientNet, MobileNet)
+    \item \textbf{Vision Transformers (ViTs):} Modelos basados en mecanismos de atención (ViT, DeiT, Swin Transformer)
+    \item \textbf{Modelos fundacionales y multimodales:} CLIP, DINOv2, SAM y otros modelos pre-entrenados a gran escala
+    \item \textbf{Aprendizaje auto-supervisado:} Técnicas modernas como MAE, SimCLR y DINO
+    \item \textbf{Arquitecturas híbridas:} Modelos que combinan convoluciones y atención
+\end{itemize}
+
+Los estudiantes explorarán estas diferentes familias de modelos, compararán sus fortalezas y debilidades, y seleccionarán las arquitecturas más apropiadas para su proyecto específico.
+
+\vspace{0.5cm}
+
+\subsection*{Formato del Curso}
+\vspace{-0.3cm}
+
+El curso se estructura como un \textbf{seminario-taller} donde:
+\begin{itemize}[leftmargin=*]
+    \item Los estudiantes leen y presentan artículos científicos relevantes
+    \item Se discuten conceptos, técnicas y resultados de investigaciones actuales
+    \item Cada estudiante desarrolla su propio proyecto de clasificación de imágenes
+    \item Las sesiones incluyen revisión de avances, retroalimentación y mentoría
+    \item El proyecto final puede ser utilizado como trabajo de titulación
+\end{itemize}
+
+\vspace{0.5cm}
+
+\section*{\faIcon{check-circle} Pre-requisitos}
+\addcontentsline{toc}{section}{Pre-requisitos}
+
+Para un aprovechamiento óptimo del curso, se requiere que los participantes cumplan con los siguientes requisitos:
+
+\subsection*{Conocimientos Matemáticos}
+\vspace{-0.3cm}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Álgebra lineal:} vectores, matrices y transformaciones lineales
+    \item \textbf{Cálculo:} diferencial e integral
+    \item \textbf{Probabilidad y estadística:} conceptos básicos
+    \item \textbf{Regresión logística:} deseable experiencia previa
+\end{itemize}
+
+\subsection*{Habilidades Técnicas}
+\vspace{-0.3cm}
+\begin{itemize}[leftmargin=*]
+    \item Capacidad para leer y entender documentación técnica y artículos en inglés
+    \item Conocimientos básicos de programación en Python
+    \item Familiaridad con control de versiones (Git/GitHub)
+\end{itemize}
+
+\subsection*{Herramientas de Apoyo}
+\vspace{-0.3cm}
+\begin{itemize}[leftmargin=*]
+    \item Se utilizará un \textbf{aula virtual de Google Classroom} como apoyo para el curso
+    \item Cada alumno deberá subir su código de tareas y proyectos a un \textbf{repositorio en GitHub}
+    \item Se recomienda tener una cuenta activa en GitHub
+\end{itemize}
+
+\newpage
+
+\section*{\faIcon{calendar-alt} Estructura del Seminario-Taller}
+\addcontentsline{toc}{section}{Estructura del Seminario-Taller}
+
+El seminario-taller se organiza en torno a \textbf{cuatro ejes principales}: lectura y discusión de literatura científica, desarrollo del proyecto de titulación, presentaciones de avances, y documentación técnica.
+
+\vspace{0.5cm}
+
+\subsection*{Fase 1: Fundamentos y Estado del Arte (Semanas 1--4)}
+\vspace{-0.2cm}
+
+\textbf{Actividades de lectura y síntesis:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Arquitecturas fundacionales:} LeCun et al. (1998) - LeNet, Krizhevsky et al. (2012) - AlexNet, He et al. (2016) - ResNet
+    \item \textbf{Vision Transformers:} Dosovitskiy et al. (2021) - ViT, Touvron et al. (2021) - DeiT, Liu et al. (2021) - Swin Transformer
+    \item \textbf{Aprendizaje auto-supervisado:} Chen et al. (2020) - SimCLR, He et al. (2022) - MAE
+    \item Síntesis del estado del arte 2020-2025: transición de CNNs a Transformers
+    \item Elaboración de fichas bibliográficas y mapas conceptuales
+\end{itemize}
+
+\textbf{Desarrollo del proyecto:}
+\begin{itemize}[leftmargin=*]
+    \item Definición del problema de clasificación a resolver (dominio de aplicación)
+    \item Búsqueda y selección de datasets apropiados
+    \item Análisis exploratorio de datos (distribución de clases, sesgos potenciales)
+    \item Configuración del entorno de desarrollo (PyTorch/TensorFlow)
+    \item Establecimiento de baselines con arquitecturas clásicas (CNNs) y modernas (ViTs)
+\end{itemize}
+
+\subsection*{Fase 2: Procesamiento de Datos y Experimentación (Semanas 5--8)}
+\vspace{-0.2cm}
+
+\textbf{Actividades de lectura y síntesis:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Data augmentation:} Shorten \& Khoshgoftaar (2019) - Survey on image data augmentation
+    \item \textbf{Transfer learning y fine-tuning:} Tan \& Le (2019) - EfficientNet, Touvron et al. - DeiT distillation
+    \item \textbf{Modelos fundacionales:} Radford et al. (2021) - CLIP, Oquab et al. (2023) - DINOv2
+    \item Análisis de casos de estudio en dominios específicos
+\end{itemize}
+
+\textbf{Desarrollo del proyecto:}
+\begin{itemize}[leftmargin=*]
+    \item Implementación del pipeline de procesamiento de datos con augmentation
+    \item Experimentación con transfer learning usando modelos pre-entrenados (ImageNet, CLIP)
+    \item Comparación de familias de arquitecturas: CNNs (ResNet, EfficientNet) vs. ViTs (DeiT, Swin)
+    \item Exploración de modelos fundacionales y fine-tuning especializado
+    \item Uso de MLOps: experiment tracking (Weights \& Biases, MLflow)
+    \item Documentación de experimentos y resultados comparativos
+\end{itemize}
+
+\subsection*{Fase 3: Optimización, Evaluación y Fairness (Semanas 9--12)}
+\vspace{-0.2cm}
+
+\textbf{Actividades de lectura y síntesis:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Eficiencia:} Howard et al. (2019) - MobileNetV3, técnicas de quantization y pruning
+    \item \textbf{Interpretabilidad:} Selvaraju et al. (2017) - Grad-CAM, análisis de atención en ViTs
+    \item \textbf{Fairness:} Buolamwini \& Gebru (2018) - Gender Shades, Meta AI (2023) - FACET benchmark
+    \item \textbf{Robustness:} Madry et al. (2018) - Adversarial training, estudios sobre distribution shifts
+    \item Métricas de evaluación y mejores prácticas
+\end{itemize}
+
+\textbf{Desarrollo del proyecto:}
+\begin{itemize}[leftmargin=*]
+    \item Ajuste de hiperparámetros para las arquitecturas seleccionadas (grid search, Bayesian optimization)
+    \item Evaluación rigurosa: accuracy, precision, recall, F1-score, confusion matrices
+    \item Análisis de fairness: evaluación de sesgos en subgrupos demográficos
+    \item Interpretabilidad específica por arquitectura: Grad-CAM para CNNs, attention maps para ViTs
+    \item Análisis comparativo de eficiencia computacional y rendimiento entre arquitecturas
+    \item Análisis de errores y diagnóstico del modelo
+    \item Comparación con baselines y trabajos relacionados del estado del arte
+\end{itemize}
+
+\subsection*{Fase 4: Deployment, MLOps y Documentación Final (Semanas 13--16)}
+\vspace{-0.2cm}
+
+\textbf{Actividades de lectura y síntesis:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Model serving:} BentoML, TensorFlow Serving, ONNX Runtime
+    \item \textbf{MLOps:} Data versioning (DVC), monitoring (Evidently AI), continuous learning
+    \item \textbf{Casos de estudio:} Tesla Autopilot MLOps, Uber Michelangelo platform
+    \item \textbf{Consideraciones éticas:} Deployment responsable, privacidad, fairness en producción
+\end{itemize}
+
+\textbf{Desarrollo del proyecto:}
+\begin{itemize}[leftmargin=*]
+    \item Selección y optimización del modelo final basado en experimentos comparativos
+    \item Optimización para producción: quantization, pruning, conversión a ONNX
+    \item Desarrollo de API REST para servir el modelo (FastAPI/Flask + Docker)
+    \item Implementación de monitoring y drift detection
+    \item Creación de interfaz de usuario/demo (Gradio/Streamlit, opcional)
+    \item Documentación técnica completa: justificación de elección de arquitectura, comparaciones experimentales
+    \item Preparación del reporte final (formato de tesis: 50--80 páginas)
+    \item Presentación final del proyecto ante el grupo
+\end{itemize}
+
+
+\newpage
+
+\section*{\faIcon{clipboard-check} Evaluación del Seminario-Taller}
+\addcontentsline{toc}{section}{Evaluación del Seminario-Taller}
+
+La evaluación se centra en el \textbf{desarrollo del proyecto de titulación} y la \textbf{apropiación de conocimiento} a través de la lectura y síntesis de literatura científica.
+
+\vspace{0.5cm}
+
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|c|X|c|}
+\hline
+\rowcolor{primarycolor}
+\textcolor{white}{\textbf{Actividad}} & \textcolor{white}{\textbf{Fase}} & \textcolor{white}{\textbf{Descripción}} & \textcolor{white}{\textbf{\%}} \\
+\hline
+\textbf{Presentaciones de Papers} & 1--4 &
+Exposición y discusión de artículos científicos asignados. Debe incluir síntesis, análisis crítico y conexión con el proyecto personal. & 20\% \\
+\hline
+\textbf{Avances del Proyecto} & 1--4 &
+Entregas parciales del proyecto en cada fase: (1) Propuesta y análisis de datos, (2) Pipeline y modelo base, (3) Optimización y evaluación, (4) Implementación completa. & 30\% \\
+\hline
+\textbf{Documentación Técnica} & 1--4 &
+Reporte técnico progresivo que documenta el proyecto con formato de tesis. Incluye introducción, estado del arte, metodología, experimentos y resultados. & 20\% \\
+\hline
+\textbf{Proyecto Final} & 4 &
+Proyecto completo de clasificación de imágenes con: código documentado, modelo entrenado, API/interfaz, reporte final y presentación. Debe ser de calidad para titulación. & 30\% \\
+\hline
+\end{tabularx}
+\caption{Distribución de la evaluación del seminario-taller}
+\end{table}
+
+\vspace{0.5cm}
+
+\begin{infobox}{Componentes del Proyecto de Titulación}
+El proyecto final debe ser un trabajo completo y de calidad suficiente para servir como tesis, incluyendo:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Revisión bibliográfica} exhaustiva del estado del arte
+    \item \textbf{Planteamiento del problema} claro y bien motivado
+    \item \textbf{Metodología} detallada y justificada científicamente
+    \item \textbf{Implementación} completa y reproducible (código en GitHub)
+    \item \textbf{Experimentación} rigurosa con análisis de resultados
+    \item \textbf{Comparación} con trabajos relacionados y baselines
+    \item \textbf{Conclusiones} y trabajo futuro
+    \item \textbf{Producto funcional} (API, aplicación web, etc.)
+    \item \textbf{Reporte final} con formato de tesis (50--80 páginas)
+\end{enumerate}
+\end{infobox}
+
+\vspace{1cm}
+
+\subsection*{Criterios de Evaluación de Presentaciones}
+\begin{itemize}[leftmargin=*]
+    \item Comprensión profunda del artículo presentado
+    \item Calidad de la síntesis y capacidad de explicar conceptos complejos
+    \item Análisis crítico de fortalezas y limitaciones
+    \item Conexión con el proyecto personal y aplicabilidad
+    \item Participación activa en discusiones
+\end{itemize}
+
+\subsection*{Políticas del Seminario-Taller}
+\begin{itemize}[leftmargin=*]
+    \item La calificación mínima aprobatoria es de 60\%
+    \item Se requiere asistencia mínima del 80\% y participación activa
+    \item Los avances deben entregarse en las fechas establecidas
+    \item El proyecto es individual, aunque se fomenta la colaboración y discusión
+    \item Cada estudiante debe mantener un repositorio de GitHub actualizado
+    \item Las presentaciones de papers son obligatorias y se asignan rotativamente
+    \item Se espera honestidad académica; el plagio resultará en reprobación automática
+\end{itemize}
+
+\newpage
+
+\section*{\faIcon{book} Bibliografía}
+\addcontentsline{toc}{section}{Bibliografía}
+
+\subsection*{Artículos Científicos Fundamentales (Papers para Presentar)}
+
+\subsubsection*{Arquitecturas Fundacionales (Era CNN)}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{LeCun, Y., Bottou, L., Bengio, Y., \& Haffner, P.} (1998). \textit{Gradient-based learning applied to document recognition.} Proceedings of the IEEE.\\
+    \textcolor{secondarycolor}{\small Paper fundacional sobre redes convolucionales y LeNet.}
+
+    \item \textbf{Krizhevsky, A., Sutskever, I., \& Hinton, G. E.} (2012). \textit{ImageNet classification with deep convolutional neural networks.} NeurIPS.\\
+    \textcolor{secondarycolor}{\small AlexNet: inicio de la era moderna de deep learning en visión.}
+
+    \item \textbf{He, K., Zhang, X., Ren, S., \& Sun, J.} (2016). \textit{Deep residual learning for image recognition.} CVPR.\\
+    \textcolor{secondarycolor}{\small ResNet: conexiones residuales que permiten redes muy profundas.}
+
+    \item \textbf{Tan, M., \& Le, Q.} (2019). \textit{EfficientNet: Rethinking model scaling for convolutional neural networks.} ICML.\\
+    \textcolor{secondarycolor}{\small Escalamiento eficiente con compound scaling (depth, width, resolution).}
+\end{enumerate}
+
+\subsubsection*{Vision Transformers y Modelos Fundacionales}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Dosovitskiy, A., et al.} (2021). \textit{An image is worth 16×16 words: Transformers for image recognition at scale.} ICLR.\\
+    \textcolor{secondarycolor}{\small Vision Transformer (ViT): transformers puros aplicados a visión por computadora.}
+
+    \item \textbf{Touvron, H., et al.} (2021). \textit{Training data-efficient image transformers.} ICML.\\
+    \textcolor{secondarycolor}{\small DeiT: hace ViT práctico con knowledge distillation, 85.2\% en ImageNet-1K.}
+
+    \item \textbf{Liu, Z., et al.} (2021). \textit{Swin Transformer: Hierarchical vision transformer using shifted windows.} ICCV (Best Paper).\\
+    \textcolor{secondarycolor}{\small Complejidad lineal con shifted windows, dominante para detección y segmentación.}
+
+    \item \textbf{Kirillov, A., et al.} (2023). \textit{Segment Anything.} ICCV.\\
+    \textcolor{secondarycolor}{\small SAM: modelo fundacional para segmentación, entrenado en 1.1B máscaras.}
+\end{enumerate}
+
+\subsubsection*{Aprendizaje Auto-Supervisado}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Chen, T., et al.} (2020). \textit{A simple framework for contrastive learning of visual representations.} ICML.\\
+    \textcolor{secondarycolor}{\small SimCLR: aprendizaje contrastivo con grandes batch sizes y augmentations.}
+
+    \item \textbf{He, K., et al.} (2022). \textit{Masked autoencoders are scalable vision learners.} CVPR.\\
+    \textcolor{secondarycolor}{\small MAE: enmascara 75\% de patches, 87.8\% ImageNet, 3× más rápido que contrastivos.}
+
+    \item \textbf{Oquab, M., et al.} (2023). \textit{DINOv2: Learning robust visual features without supervision.}\\
+    \textcolor{secondarycolor}{\small DINOv2: entrenado en 142M imágenes, features robustos para percepción estructurada.}
+
+    \item \textbf{Caron, M., et al.} (2021). \textit{Emerging properties in self-supervised vision transformers.} ICCV.\\
+    \textcolor{secondarycolor}{\small DINO: auto-distilación sin labels, emergencia de segmentación semántica.}
+\end{enumerate}
+
+\subsubsection*{Modelos Multimodales}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Radford, A., et al.} (2021). \textit{Learning transferable visual models from natural language supervision.} ICML.\\
+    \textcolor{secondarycolor}{\small CLIP: 400M pares imagen-texto, zero-shot transfer revolucionario.}
+
+    \item \textbf{Li, J., et al.} (2022). \textit{BLIP: Bootstrapping language-image pre-training.} ICML.\\
+    \textcolor{secondarycolor}{\small Unifica comprensión y generación visión-lenguaje con CapFilt.}
+\end{enumerate}
+
+\subsubsection*{Eficiencia y Deployment}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Howard, A., et al.} (2019). \textit{Searching for MobileNetV3.} ICCV.\\
+    \textcolor{secondarycolor}{\small MobileNetV3: 75.2\% ImageNet con 5.4M parámetros, optimizado para móviles.}
+
+    \item \textbf{Shorten, C., \& Khoshgoftaar, T. M.} (2019). \textit{A survey on image data augmentation for deep learning.} Journal of Big Data.\\
+    \textcolor{secondarycolor}{\small Revisión exhaustiva de técnicas de data augmentation.}
+\end{enumerate}
+
+\subsubsection*{Interpretabilidad, Fairness y Robustness}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Selvaraju, R. R., et al.} (2017). \textit{Grad-CAM: Visual explanations from deep networks via gradient-based localization.} ICCV.\\
+    \textcolor{secondarycolor}{\small Interpretabilidad: visualización de regiones importantes para predicción.}
+
+    \item \textbf{Buolamwini, J., \& Gebru, T.} (2018). \textit{Gender shades: Intersectional accuracy disparities in commercial gender classification.} FAT.\\
+    \textcolor{secondarycolor}{\small Revela sesgos en sistemas comerciales: 20-34\% disparidad de error.}
+
+    \item \textbf{Madry, A., et al.} (2018). \textit{Towards deep learning models resistant to adversarial attacks.} ICLR.\\
+    \textcolor{secondarycolor}{\small Adversarial training con PGD, fundamento de robustness adversarial.}
+\end{enumerate}
+
+\subsection*{Libros de Texto y Referencia}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Goodfellow, I., Bengio, Y., \& Courville, A.} (2016). \textit{Deep Learning.} MIT Press.\\
+    \textcolor{secondarycolor}{\small Referencia fundamental sobre deep learning (disponible en línea).}
+
+    \item \textbf{Chollet, François.} (2021). \textit{Deep Learning with Python, 2nd Edition.} Manning Publications.\\
+    \textcolor{secondarycolor}{\small Guía práctica con Keras/TensorFlow.}
+
+    \item \textbf{Szeliski, Richard.} (2022). \textit{Computer Vision: Algorithms and Applications, 2nd Edition.} Springer.\\
+    \textcolor{secondarycolor}{\small Texto completo sobre visión por computadora.}
+
+    \item \textbf{Prince, Simon J. D.} (2023). \textit{Understanding Deep Learning.} MIT Press.\\
+    \textcolor{secondarycolor}{\small Introducción moderna y accesible al deep learning.}
+\end{enumerate}
+
+\subsection*{Recursos Adicionales}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Papers With Code:} \url{https://paperswithcode.com/}\\
+    \textcolor{secondarycolor}{\small Plataforma con papers, código e implementaciones.}
+
+    \item \textbf{arXiv:} \url{https://arxiv.org/} (secciones cs.CV, cs.LG)\\
+    \textcolor{secondarycolor}{\small Repositorio de preprints en Computer Vision y Machine Learning.}
+
+    \item \textbf{PyTorch \& TensorFlow Documentation}\\
+    \textcolor{secondarycolor}{\small Documentación oficial de los frameworks principales.}
+\end{enumerate}
+
+
+
+\end{document}

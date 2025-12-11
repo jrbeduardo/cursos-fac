@@ -1,0 +1,572 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║           MODELOS DE APRENDIZAJE PROFUNDO PARA VISIÓN POR COMPUTADORA     ║
+║                    Proyecto I - Trabajo de Titulación                     ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+Fecha: 1 de noviembre de 2025
+
+
+═══════════════════════════════════════════════════════════════════════════
+INFORMACIÓN DEL CURSO SOLICITADO
+═══════════════════════════════════════════════════════════════════════════
+
+PROFESOR:
+  José Eduardo Rodríguez Barrios
+  Horario: Lunes, Miércoles, Viernes de 17:00 a 18:00 hrs
+
+AYUDANTE:
+  Francisco Pérez Carbajal
+  Horario: Martes, Jueves de 17:00 a 18:00 hrs
+
+MODALIDAD:
+  Proyecto I - Trabajo de Titulación
+
+
+═══════════════════════════════════════════════════════════════════════════
+OBJETIVO DEL CURSO
+═══════════════════════════════════════════════════════════════════════════
+
+Desarrollar un PROYECTO DE TITULACIÓN en aprendizaje profundo aplicado a
+visión por computadora, explorando CNNs, Vision Transformers y modelos
+multimodales mediante lectura de papers, experimentación práctica y
+documentación técnica rigurosa.
+
+RESULTADOS DE APRENDIZAJE:
+  Dominar arquitecturas CNNs y Vision Transformers
+  Implementar clasificador de imágenes end-to-end
+  Comparar arquitecturas experimentalmente
+  Desarrollar API y sistema de despliegue
+  Documentar con formato de tesis (50-80 páginas)
+
+
+───────────────────────────────────────────────────────────────────────────
+ALCANCE
+───────────────────────────────────────────────────────────────────────────
+
+• CNNs: LeNet, AlexNet, ResNet, EfficientNet, MobileNet
+• Vision Transformers: ViT, DeiT, Swin Transformer
+• Modelos fundacionales: CLIP, DINOv2, SAM
+• Aprendizaje auto-supervisado: MAE, SimCLR, DINO
+• Transfer learning, fine-tuning, MLOps
+
+
+───────────────────────────────────────────────────────────────────────────
+FORMATO
+───────────────────────────────────────────────────────────────────────────
+
+Seminario-taller con:
+  • Presentación y discusión de papers científicos
+  • Desarrollo de proyecto individual
+  • Revisiones de avance y mentoría
+  • Documentación progresiva estilo tesis
+
+
+═══════════════════════════════════════════════════════════════════════════
+PRE-REQUISITOS
+═══════════════════════════════════════════════════════════════════════════
+
+MATEMÁTICAS:
+  • Álgebra lineal, cálculo diferencial e integral
+  • Probabilidad y estadística
+  • Regresión logística (deseable)
+
+TÉCNICAS:
+  • Lectura de documentación técnica en inglés
+  • Programación en Python
+  • Git/GitHub
+
+HERRAMIENTAS:
+  • Google Classroom
+  • Repositorio GitHub personal
+
+
+═══════════════════════════════════════════════════════════════════════════
+ESTRUCTURA (16 SEMANAS)
+═══════════════════════════════════════════════════════════════════════════
+
+FASE 1 (Semanas 1-4): FUNDAMENTOS
+  Lecturas: LeNet, AlexNet, ResNet, ViT, DeiT, Swin, SimCLR, MAE
+  Tareas: Definir problema, dataset, EDA, baselines CNN/ViT
+  Entrega: Propuesta (5-10 pág)
+
+FASE 2 (Semanas 5-8): EXPERIMENTACIÓN
+  Lecturas: Augmentation, Transfer learning, CLIP, DINOv2
+  Tareas: Pipeline datos, transfer learning, comparar arquitecturas
+  Entrega: Pipeline + baselines (10-15 pág)
+
+FASE 3 (Semanas 9-12): OPTIMIZACIÓN
+  Lecturas: MobileNetV3, Grad-CAM, Fairness, Adversarial training
+  Tareas: Hiperparámetros, evaluación, interpretabilidad, análisis comparativo
+  Entrega: Modelos optimizados (20-30 pág)
+
+FASE 4 (Semanas 13-16): DEPLOYMENT
+  Lecturas: MLOps, DVC, BentoML, ONNX
+  Tareas: Quantization, API REST, monitoring, demo
+  Entrega: Sistema completo + tesis (50-80 pág) + presentación
+
+
+═══════════════════════════════════════════════════════════════════════════
+EVALUACIÓN
+═══════════════════════════════════════════════════════════════════════════
+
+  • Presentaciones de Papers (20%): Exposición y análisis crítico
+  • Avances del Proyecto (30%): 4 entregas parciales
+  • Documentación Técnica (20%): Reporte progresivo formato tesis
+  • Proyecto Final (30%): Sistema completo + tesis + presentación
+
+PROYECTO FINAL INCLUYE:
+  1. Revisión bibliográfica    6. Comparación estado del arte
+  2. Planteamiento problema    7. Conclusiones
+  3. Metodología              8. API funcional
+  4. Código GitHub            9. Tesis (50-80 pág)
+  5. Experimentación
+
+POLÍTICAS:
+  • Aprobación: 60% | Asistencia: 80%
+  • Proyecto individual | GitHub obligatorio
+  • Plagio = reprobación automática
+
+
+═══════════════════════════════════════════════════════════════════════════
+BIBLIOGRAFÍA
+═══════════════════════════════════════════════════════════════════════════
+
+PAPERS FUNDAMENTALES:
+1. LeCun (1998) - LeNet                11. Oquab (2023) - DINOv2
+2. Krizhevsky (2012) - AlexNet         12. Caron (2021) - DINO
+3. He (2016) - ResNet                  13. Radford (2021) - CLIP
+4. Tan (2019) - EfficientNet           14. Li (2022) - BLIP
+5. Dosovitskiy (2021) - ViT            15. Howard (2019) - MobileNetV3
+6. Touvron (2021) - DeiT               16. Shorten (2019) - Augmentation
+7. Liu (2021) - Swin Transformer       17. Selvaraju (2017) - Grad-CAM
+8. Kirillov (2023) - SAM               18. Buolamwini (2018) - Gender Shades
+9. Chen (2020) - SimCLR                19. Madry (2018) - Adversarial training
+10. He (2022) - MAE
+
+LIBROS:
+20. Goodfellow et al. (2016) - Deep Learning
+21. Chollet (2021) - Deep Learning with Python
+22. Szeliski (2022) - Computer Vision
+23. Prince (2023) - Understanding Deep Learning
+
+RECURSOS: Papers With Code, arXiv (cs.CV, cs.LG), PyTorch/TensorFlow Docs
+
+
+═══════════════════════════════════════════════════════════════════════════
+HERRAMIENTAS Y TECNOLOGÍAS
+═══════════════════════════════════════════════════════════════════════════
+
+FRAMEWORKS DE DEEP LEARNING:
+  • PyTorch (recomendado)
+  • TensorFlow / Keras
+
+BIBLIOTECAS DE PROCESAMIENTO:
+  • NumPy - Operaciones numéricas
+  • OpenCV - Procesamiento de imágenes
+  • PIL/Pillow - Manipulación de imágenes
+  • Albumentations - Data augmentation
+
+MODELOS PRE-ENTRENADOS:
+  • torchvision.models (ResNet, EfficientNet, ViT)
+  • timm (PyTorch Image Models)
+  • Hugging Face Transformers (ViT, DeiT, Swin)
+  • CLIP, DINOv2, SAM
+
+MLOPS Y EXPERIMENT TRACKING:
+  • Weights & Biases
+  • MLflow
+  • DVC (Data Version Control)
+  • TensorBoard
+
+DESARROLLO DE APIs:
+  • FastAPI (recomendado)
+  • Flask
+  • Docker
+  • Swagger/OpenAPI
+
+DESPLIEGUE Y SERVING:
+  • BentoML
+  • TensorFlow Serving
+  • ONNX Runtime
+  • Gradio / Streamlit (demos)
+
+MONITOREO:
+  • Evidently AI (drift detection)
+  • Prometheus + Grafana
+
+
+═══════════════════════════════════════════════════════════════════════════
+METODOLOGÍA DEL SEMINARIO-TALLER
+═══════════════════════════════════════════════════════════════════════════
+
+SESIONES PRESENCIALES:
+
+  • PRESENTACIONES DE PAPERS (40-50 min)
+    - Un estudiante presenta un artículo científico
+    - Explicación de conceptos clave, metodología y resultados
+    - Análisis crítico de fortalezas y limitaciones
+    - Discusión grupal
+
+  • REVISIÓN DE AVANCES (30-40 min)
+    - Estudiantes presentan progreso de sus proyectos
+    - Discusión de desafíos y soluciones
+    - Retroalimentación del instructor y compañeros
+
+  • MENTORÍA Y ASESORÍA (20-30 min)
+    - Resolución de dudas técnicas
+    - Orientación sobre dirección del proyecto
+    - Sugerencias de mejora
+
+TRABAJO AUTÓNOMO:
+
+  • Lectura y análisis de papers asignados
+  • Desarrollo del proyecto individual
+  • Experimentación con arquitecturas y técnicas
+  • Documentación progresiva del trabajo
+  • Escritura del reporte de tesis
+
+FORMATO DE PRESENTACIONES DE PAPERS:
+
+  1. Contexto e importancia (5 min)
+  2. Problema abordado y motivación (5 min)
+  3. Metodología propuesta (10-15 min)
+  4. Experimentos y resultados (10-15 min)
+  5. Análisis crítico y conexión con proyecto personal (5-10 min)
+  6. Preguntas y discusión (10-15 min)
+
+
+═══════════════════════════════════════════════════════════════════════════
+COMPETENCIAS A DESARROLLAR
+═══════════════════════════════════════════════════════════════════════════
+
+COMPETENCIAS TÉCNICAS:
+
+  - Comprender el estado del arte en aprendizaje profundo para visión por
+    computadora (CNNs, ViTs, modelos fundacionales)
+
+  - Implementar y comparar diferentes arquitecturas de redes neuronales
+
+  - Aplicar técnicas modernas de transfer learning, fine-tuning y aprendizaje
+    auto-supervisado
+
+  - Desarrollar pipelines completos de ML: datos, entrenamiento, evaluación,
+    despliegue
+
+  - Utilizar herramientas de MLOps para experiment tracking y reproducibilidad
+
+  - Optimizar modelos para producción (quantization, pruning, ONNX)
+
+  - Desarrollar APIs REST para servir modelos de ML
+
+  - Evaluar modelos con rigor: métricas, fairness, robustness,
+    interpretabilidad
+
+
+COMPETENCIAS ACADÉMICAS Y PROFESIONALES:
+
+  - Leer, analizar y sintetizar artículos científicos de alto nivel
+
+  - Presentar conceptos técnicos complejos de manera clara
+
+  - Escribir documentación técnica con calidad de publicación
+
+  - Desarrollar un proyecto de investigación aplicada completo
+
+  - Trabajar con metodología científica: hipótesis, experimentación, análisis
+
+  - Manejar repositorios de código con buenas prácticas (Git/GitHub)
+
+  - Comunicar resultados de forma profesional (presentaciones, reportes)
+
+
+═══════════════════════════════════════════════════════════════════════════
+ENTREGABLES DEL PROYECTO
+═══════════════════════════════════════════════════════════════════════════
+
+ENTREGA 1 - PROPUESTA Y ANÁLISIS (Semana 4):
+  • Documento de propuesta (5-10 páginas)
+  • Definición del problema
+  • Estado del arte preliminar
+  • Descripción del dataset
+  • Análisis exploratorio de datos
+  • Plan de experimentación
+
+ENTREGA 2 - PIPELINE Y MODELO BASE (Semana 8):
+  • Pipeline de datos implementado
+  • Modelos baseline entrenados (CNN y ViT)
+  • Resultados preliminares
+  • Código en GitHub
+  • Reporte de avances (10-15 páginas)
+
+ENTREGA 3 - OPTIMIZACIÓN Y EVALUACIÓN (Semana 12):
+  • Modelos optimizados
+  • Análisis comparativo de arquitecturas
+  • Evaluación rigurosa (métricas, fairness, interpretabilidad)
+  • Experimentos documentados (MLflow/W&B)
+  • Reporte de avances (20-30 páginas)
+
+ENTREGA 4 - PROYECTO FINAL (Semana 16):
+  • Código completo y documentado (GitHub)
+  • Modelo final optimizado
+  • API REST funcional (FastAPI + Docker)
+  • Demo/interfaz (Gradio/Streamlit)
+  • Reporte final formato tesis (50-80 páginas)
+  • Presentación (20-30 min + preguntas)
+
+
+═══════════════════════════════════════════════════════════════════════════
+ESTRUCTURA DEL REPORTE FINAL (TESIS)
+═══════════════════════════════════════════════════════════════════════════
+
+El reporte final debe seguir la estructura de una tesis de grado:
+
+1. PORTADA Y PÁGINAS PRELIMINARES
+   • Título del proyecto
+   • Autor, asesor, institución
+   • Resumen (español e inglés)
+   • Agradecimientos (opcional)
+   • Tabla de contenidos
+
+2. INTRODUCCIÓN (5-8 páginas)
+   • Contexto y motivación
+   • Planteamiento del problema
+   • Objetivos (general y específicos)
+   • Alcance y limitaciones
+   • Organización del documento
+
+3. ESTADO DEL ARTE (15-20 páginas)
+   • Fundamentos de deep learning y visión por computadora
+   • Arquitecturas CNNs: evolución y principales modelos
+   • Vision Transformers: ViT, DeiT, Swin, otros
+   • Modelos fundacionales y multimodales: CLIP, DINOv2, SAM
+   • Aprendizaje auto-supervisado: SimCLR, MAE, DINO
+   • Transfer learning y fine-tuning
+   • Trabajos relacionados en el dominio de aplicación
+   • Análisis comparativo de enfoques
+
+4. METODOLOGÍA (10-15 páginas)
+   • Descripción del dataset
+   • Análisis exploratorio de datos
+   • Preprocesamiento y data augmentation
+   • Arquitecturas evaluadas (CNNs vs. ViTs)
+   • Configuración de experimentos
+   • Hiperparámetros y optimización
+   • Métricas de evaluación
+   • Herramientas y tecnologías utilizadas
+
+5. EXPERIMENTOS Y RESULTADOS (15-20 páginas)
+   • Configuración experimental
+   • Modelos baseline
+   • Comparación CNN vs. ViT
+   • Transfer learning vs. entrenamiento desde cero
+   • Análisis de diferentes arquitecturas
+   • Ajuste de hiperparámetros
+   • Resultados cuantitativos (tablas, métricas)
+   • Resultados cualitativos (visualizaciones)
+   • Análisis de errores
+   • Interpretabilidad (Grad-CAM, attention maps)
+   • Análisis de fairness
+   • Eficiencia computacional
+   • Comparación con estado del arte
+
+6. IMPLEMENTACIÓN Y DESPLIEGUE (5-8 páginas)
+   • Arquitectura del sistema
+   • Optimización del modelo (quantization, pruning)
+   • Desarrollo de la API REST
+   • Containerización (Docker)
+   • Interfaz de usuario (demo)
+   • Monitoreo y drift detection
+   • Consideraciones de despliegue
+
+7. CONCLUSIONES Y TRABAJO FUTURO (5-8 páginas)
+   • Resumen de contribuciones
+   • Conclusiones sobre arquitecturas (CNNs vs. ViTs)
+   • Lecciones aprendidas
+   • Limitaciones del trabajo
+   • Trabajo futuro y mejoras potenciales
+   • Impacto y aplicaciones
+
+8. REFERENCIAS
+   • Bibliografía completa en formato IEEE o APA
+
+9. APÉNDICES (opcional)
+   • Código fuente relevante
+   • Detalles de implementación
+   • Experimentos adicionales
+   • Especificaciones técnicas
+
+
+═══════════════════════════════════════════════════════════════════════════
+BUENAS PRÁCTICAS DE DESARROLLO
+═══════════════════════════════════════════════════════════════════════════
+
+REPOSITORIO GITHUB:
+
+  • README.md completo con:
+    - Descripción del proyecto
+    - Instrucciones de instalación
+    - Cómo ejecutar el código
+    - Estructura del repositorio
+    - Resultados principales
+
+  • Estructura organizada:
+    data/          - Scripts de descarga/preparación de datos
+    notebooks/     - Jupyter notebooks de exploración
+    src/           - Código fuente modular
+    models/        - Definiciones de arquitecturas
+    configs/       - Archivos de configuración
+    experiments/   - Scripts de entrenamiento
+    api/           - Código de la API
+    tests/         - Tests unitarios
+    docs/          - Documentación adicional
+
+  • .gitignore apropiado (no subir datos, modelos pesados)
+
+  • requirements.txt o environment.yml
+
+  • Commits frecuentes con mensajes descriptivos
+
+  • Documentación de funciones (docstrings)
+
+CÓDIGO LIMPIO:
+
+  • Nombres descriptivos de variables y funciones
+  • Código modular y reutilizable
+  • Comentarios donde sea necesario
+  • Seguir PEP 8 (Python style guide)
+  • Type hints cuando sea apropiado
+  • Logging en lugar de prints
+
+REPRODUCIBILIDAD:
+
+  • Fijar seeds aleatorias (random, numpy, torch)
+  • Documentar versiones de librerías
+  • Guardar configuraciones de experimentos
+  • Usar experiment tracking (MLflow, W&B)
+  • Versionar datasets (DVC)
+
+EXPERIMENTACIÓN:
+
+  • Realizar múltiples runs con diferentes seeds
+  • Reportar media y desviación estándar
+  • Validación cruzada cuando sea apropiado
+  • Guardar checkpoints de modelos
+  • Documentar todos los experimentos
+
+
+═══════════════════════════════════════════════════════════════════════════
+CONSEJOS PARA EL ÉXITO
+═══════════════════════════════════════════════════════════════════════════
+
+LECTURA DE PAPERS:
+
+  • Leer activamente: tomar notas, subrayar ideas clave
+  • No entender todo en la primera lectura es normal
+  • Enfocarse en: problema, metodología, experimentos, conclusiones
+  • Buscar el código de implementación si está disponible
+  • Conectar con papers anteriores y tu proyecto
+
+DESARROLLO DEL PROYECTO:
+
+  • Comenzar simple: baseline primero, luego complejidad
+  • Experimentar de forma sistemática: una variable a la vez
+  • Documentar TODO: decisiones, experimentos, resultados
+  • Hacer commits frecuentes en GitHub
+  • No dejar todo para el final
+
+COMPARACIÓN CNN VS. VIT:
+
+  • Implementar ambas familias de arquitecturas
+  • Comparar en múltiples dimensiones: accuracy, eficiencia, interpretabilidad
+  • Considerar el tamaño del dataset (ViTs necesitan más datos)
+  • Probar transfer learning con modelos pre-entrenados
+  • Analizar qué aprende cada tipo de arquitectura
+
+ESCRITURA DEL REPORTE:
+
+  • Escribir desde el inicio, no esperar al final
+  • Comenzar con la metodología mientras experimentas
+  • Las figuras deben ser de alta calidad y autocontenidas
+  • Tablas con resultados claros y comparables
+  • Citar apropiadamente todas las fuentes
+
+GESTIÓN DEL TIEMPO:
+
+  • Planificar con anticipación
+  • Establecer metas semanales
+  • Dedicar tiempo regular al proyecto (no solo antes de entregas)
+  • Pedir ayuda cuando te atasques
+  • Participar activamente en las sesiones
+
+
+═══════════════════════════════════════════════════════════════════════════
+CONTACTO Y RECURSOS
+═══════════════════════════════════════════════════════════════════════════
+
+PROFESOR:
+  José Eduardo Rodríguez Barrios
+  Horario de atención: Lunes, Miércoles, Viernes 17:00-18:00
+
+AYUDANTE:
+  Francisco Pérez Carbajal
+  Horario de atención: Martes, Jueves 17:00-18:00
+
+AULA VIRTUAL:
+  Google Classroom - El código será proporcionado al inicio del curso
+
+COMUNICACIÓN:
+  • Classroom para anuncios y entregas
+  • GitHub para código y revisiones
+  • Email para consultas específicas
+  • Sesiones presenciales para discusiones profundas
+
+
+═══════════════════════════════════════════════════════════════════════════
+NOTAS FINALES
+═══════════════════════════════════════════════════════════════════════════
+
+Este seminario-taller está diseñado para que desarrolles un PROYECTO DE
+TITULACIÓN completo y de alta calidad. El enfoque está en:
+
+  1. APRENDER haciendo: desarrollo práctico de un proyecto real
+
+  2. INVESTIGAR: lectura y síntesis de literatura científica actual
+
+  3. COMPARAR: evaluación rigurosa de CNNs vs. ViTs y otras arquitecturas
+
+  4. DOCUMENTAR: escritura de un reporte con calidad de tesis
+
+  5. COMUNICAR: presentación profesional de tu trabajo
+
+El objetivo final es que tengas:
+  • Un proyecto funcional de clasificación de imágenes
+  • Profundo entendimiento del estado del arte en visión por computadora
+  • Una tesis lista para defender
+  • Habilidades prácticas en ML/MLOps
+  • Portfolio técnico (GitHub + demo)
+
+Este trabajo puede servir como base para:
+  • Tesis de licenciatura/ingeniería
+  • Portfolio para búsqueda de empleo
+  • Continuación en maestría/doctorado
+  • Publicación en conferencias
+
+
+═══════════════════════════════════════════════════════════════════════════
+FIN DEL DOCUMENTO
+═══════════════════════════════════════════════════════════════════════════
+
+Modelos de Aprendizaje Profundo para Visión por Computadora
+Proyecto I - Trabajo de Titulación
+
+Profesor: José Eduardo Rodríguez Barrios
+Ayudante: Francisco Pérez Carbajal
+
+Fecha: 1 de noviembre de 2025
+
+Este documento contiene toda la información del seminario-taller basada en los
+documentos oficiales del curso. El enfoque principal es el desarrollo de un
+proyecto de titulación que explore tanto arquitecturas convolucionales clásicas
+como modelos modernos basados en transformers.
