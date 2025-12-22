@@ -1,0 +1,196 @@
+CLASIFICADOR DE IMÁGENES CON REDES NEURONALES
+PROYECTO I - MATEMÁTICAS APLICADAS (PLAN 2017)
+
+INFORMACIÓN GENERAL
+- Grupo: 6013
+- Modalidad: Presencial
+- Horario: Lunes a Viernes, 17:00 a 18:00
+- Profesor: José Eduardo Rodríguez Barrios
+- Ayudante: Francisco Pérez Carbajal
+
+OBJETIVO
+Este seminario-taller tiene como objetivo que los estudiantes desarrollen un proyecto de titulación en el área de aprendizaje profundo aplicado a la visión por computadora. A través de la lectura, síntesis y apropiación de conocimiento de artículos científicos y textos especializados, combinado con el desarrollo práctico de un proyecto, los estudiantes:
+
+Investigarán y sintetizarán el estado del arte en modelos de aprendizaje profundo para visión por computadora, desde CNNs hasta Vision Transformers y modelos fundacionales
+Desarrollarán un proyecto completo de clasificación de imágenes que pueda servir como trabajo de titulación
+Implementarán una solución end-to-end: desde el procesamiento de datos hasta el despliegue
+Experimentarán con diferentes arquitecturas (CNNs, ViTs, modelos híbridos) para comparar rendimiento y eficiencia
+Documentarán su trabajo con rigor académico y técnico
+Presentarán sus avances y resultados de forma profesional
+
+ALCANCE Y ENFOQUE
+El curso cubre el espectro completo de arquitecturas modernas para visión por computadora:
+
+Redes Neuronales Convolucionales (CNNs): desde arquitecturas fundacionales (LeNet, AlexNet, ResNet) hasta modelos eficientes (EfficientNet, MobileNet)
+Vision Transformers (ViTs): modelos basados en mecanismos de atención (ViT, DeiT, Swin Transformer)
+Modelos fundacionales y multimodales: CLIP, DINOv2, SAM y otros modelos pre-entrenados a gran escala
+Aprendizaje auto-supervisado: técnicas modernas como MAE, SimCLR y DINO
+Arquitecturas híbridas: modelos que combinan convoluciones y atención
+
+PRE-REQUISITOS
+
+Conocimientos Matemáticos:
+Álgebra lineal: vectores, matrices y transformaciones lineales
+Cálculo: diferencial e integral
+Probabilidad y estadística: conceptos básicos
+Regresión logística: deseable experiencia previa
+
+Habilidades Técnicas:
+Capacidad para leer y entender documentación técnica y artículos en inglés
+Conocimientos básicos de programación en Python
+Familiaridad con control de versiones (Git/GitHub)
+
+Herramientas de Apoyo:
+Aula virtual de Google Classroom como apoyo para el curso
+Repositorio en GitHub para subir código de tareas y proyectos
+Se recomienda tener una cuenta activa en GitHub
+
+TEMARIO
+
+FASE 1: FUNDAMENTOS Y ESTADO DEL ARTE (Semanas 1-4)
+
+Actividades de lectura y síntesis:
+Arquitecturas fundacionales: LeNet, AlexNet, ResNet
+Vision Transformers: ViT, DeiT, Swin Transformer
+Aprendizaje auto-supervisado: SimCLR, MAE
+Síntesis del estado del arte 2020-2025: transición de CNNs a Transformers
+Elaboración de fichas bibliográficas y mapas conceptuales
+
+Desarrollo del proyecto:
+Definición del problema de clasificación a resolver
+Búsqueda y selección de datasets apropiados
+Análisis exploratorio de datos
+Configuración del entorno de desarrollo (PyTorch/TensorFlow)
+Establecimiento de baselines con arquitecturas clásicas (CNNs) y modernas (ViTs)
+
+FASE 2: PROCESAMIENTO DE DATOS Y EXPERIMENTACIÓN (Semanas 5-8)
+
+Actividades de lectura y síntesis:
+Data augmentation
+Transfer learning y fine-tuning
+Modelos fundacionales: CLIP, DINOv2
+Análisis de casos de estudio en dominios específicos
+
+Desarrollo del proyecto:
+Implementación del pipeline de procesamiento de datos con augmentation
+Experimentación con transfer learning usando modelos pre-entrenados
+Comparación de familias de arquitecturas: CNNs vs. ViTs
+Exploración de modelos fundacionales y fine-tuning especializado
+Uso de MLOps: experiment tracking (Weights & Biases, MLflow)
+Documentación de experimentos y resultados comparativos
+
+FASE 3: OPTIMIZACIÓN, EVALUACIÓN Y FAIRNESS (Semanas 9-12)
+
+Actividades de lectura y síntesis:
+Eficiencia: MobileNetV3, técnicas de quantization y pruning
+Interpretabilidad: Grad-CAM, análisis de atención en ViTs
+Fairness: Gender Shades, FACET benchmark
+Robustness: Adversarial training, distribution shifts
+Métricas de evaluación y mejores prácticas
+
+Desarrollo del proyecto:
+Ajuste de hiperparámetros para las arquitecturas seleccionadas
+Evaluación rigurosa: accuracy, precision, recall, F1-score, confusion matrices
+Análisis de fairness: evaluación de sesgos en subgrupos demográficos
+Interpretabilidad específica por arquitectura
+Análisis comparativo de eficiencia computacional y rendimiento
+Análisis de errores y diagnóstico del modelo
+Comparación con baselines y trabajos relacionados
+
+FASE 4: DEPLOYMENT, MLOPS Y DOCUMENTACIÓN FINAL (Semanas 13-16)
+
+Actividades de lectura y síntesis:
+Model serving: BentoML, TensorFlow Serving, ONNX Runtime
+MLOps: Data versioning (DVC), monitoring (Evidently AI), continuous learning
+Casos de estudio: Tesla Autopilot MLOps, Uber Michelangelo platform
+Consideraciones éticas: deployment responsable, privacidad, fairness en producción
+
+Desarrollo del proyecto:
+Selección y optimización del modelo final
+Optimización para producción: quantization, pruning, conversión a ONNX
+Desarrollo de API REST para servir el modelo (FastAPI/Flask + Docker)
+Implementación de monitoring y drift detection
+Creación de interfaz de usuario/demo (Gradio/Streamlit, opcional)
+Documentación técnica completa
+Preparación del reporte final (formato de tesis: 50-80 páginas)
+Presentación final del proyecto ante el grupo
+
+EVALUACIÓN
+
+La evaluación se centra en el desarrollo del proyecto de titulación y la apropiación de conocimiento a través de la lectura y síntesis de literatura científica:
+
+1. Presentaciones de Papers (20%)
+   Exposición y discusión de artículos científicos asignados
+   Debe incluir síntesis, análisis crítico y conexión con el proyecto personal
+
+2. Avances del Proyecto (30%)
+   Entregas parciales del proyecto en cada fase:
+     - Propuesta y análisis de datos
+     - Pipeline y modelo base
+     - Optimización y evaluación
+     - Implementación completa
+
+3. Documentación Técnica (20%)
+   Reporte técnico progresivo que documenta el proyecto con formato de tesis
+   Incluye introducción, estado del arte, metodología, experimentos y resultados
+
+4. Proyecto Final (30%)
+   Proyecto completo de clasificación de imágenes con:
+     - Código documentado
+     - Modelo entrenado
+     - API/interfaz
+     - Reporte final y presentación
+   Debe ser de calidad para titulación
+
+COMPONENTES DEL PROYECTO DE TITULACIÓN
+El proyecto final debe ser un trabajo completo y de calidad suficiente para servir como tesis, incluyendo:
+1. Revisión bibliográfica exhaustiva del estado del arte
+2. Planteamiento del problema claro y bien motivado
+3. Metodología detallada y justificada científicamente
+4. Implementación completa y reproducible (código en GitHub)
+5. Experimentación rigurosa con análisis de resultados
+6. Comparación con trabajos relacionados y baselines
+7. Conclusiones y trabajo futuro
+8. Producto funcional (API, aplicación web, etc.)
+9. Reporte final con formato de tesis (50-80 páginas)
+
+POLÍTICAS DEL CURSO
+Calificación mínima aprobatoria: 60%
+Asistencia mínima requerida: 80% y participación activa
+Los avances deben entregarse en las fechas establecidas
+El proyecto es individual, aunque se fomenta la colaboración y discusión
+Cada estudiante debe mantener un repositorio de GitHub actualizado
+Las presentaciones de papers son obligatorias y se asignan rotativamente
+Se espera honestidad académica; el plagio resultará en reprobación automática
+
+TEMAS DE AYUDANTÍA
+
+Las sesiones de ayudantía complementan el contenido teórico del curso con habilidades prácticas esenciales para el desarrollo profesional de proyectos de ML:
+
+Módulo 1: Fundamentos de Herramientas
+Git y GitHub desde cero
+Markdown y documentación técnica
+Entorno de desarrollo Python (venv, uv, gestión de dependencias)
+Google Colab y recursos en la nube
+
+Módulo 2: APIs y Servicios Web
+Consumo de APIs REST
+Creación de APIs con FastAPI
+
+Módulo 3: Hugging Face Ecosystem
+Primeros pasos con Hugging Face
+Uso avanzado de modelos preentrenados
+
+Módulo 4: Despliegue y Producción
+Docker y contenedores para ML
+Despliegue de modelos en producción
+
+Módulo 5: Presentación de Resultados
+Preparación de la presentación final (LaTeX)
+Visualizaciones efectivas
+Ensayo y retroalimentación
+
+---
+Universidad Nacional Autónoma de México
+Facultad de Ciencias
+Matemáticas Aplicadas (Plan 2017)

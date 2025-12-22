@@ -114,8 +114,8 @@
     \textbf{Grupo:} 6012\\
     \textbf{Modalidad:} Presencial\\
     \textbf{Horario:} Lunes a Viernes, 17:00 a 18:00\\
-    \textbf{Profesor:} Francisco Pérez Carbajal\\
-    \textbf{Ayudante:} José Eduardo Rodríguez Barrios
+    \textbf{Profesor:} Francisco Peez Carbajal\\
+    \textbf{Ayudante:} Jose Eduardo Rodriuez Barrios
 \end{tcolorbox}
 \end{center}
 \end{titlepage}
@@ -213,7 +213,7 @@ El seminario-taller se organiza en cuatro fases, integrando teoría y práctica 
 \begin{itemize}[leftmargin=*]
     \item Definición del problema y tarea lingüística (clasificación, QA, resumen, etc.).
     \item Recolección y exploración del corpus de texto.
-    \item Configuración del entorno de desarrollo (Python + Hugging Face).
+    \item Configuración del entorno de desarrollo.
     \item Establecimiento de baselines con modelos preentrenados.
 \end{itemize}
 
@@ -223,7 +223,7 @@ El seminario-taller se organiza en cuatro fases, integrando teoría y práctica 
 \begin{itemize}[leftmargin=*]
     \item Lectura y análisis de técnicas de tokenización y fine-tuning (LoRA, QLoRA, adapters).
     \item Implementación del pipeline de entrenamiento y experimentación con modelos recientes (LLaMA, Falcon, Mistral).
-    \item Uso de herramientas de MLOps para el seguimiento de experimentos.
+    \item Discusión sobre optimización de hiperparámetros y estrategias de validación.
 \end{itemize}
 
 \textbf{Desarrollo del proyecto:}
@@ -272,6 +272,80 @@ El seminario-taller se organiza en cuatro fases, integrando teoría y práctica 
 
 \newpage
 
+\section{Temas de Ayudantía}
+
+La ayudantía del curso está diseñada para proporcionar \textbf{soporte técnico y práctico} a los estudiantes en el desarrollo de su proyecto. Las sesiones de ayudantía se enfocan en herramientas, técnicas y buenas prácticas esenciales para la implementación exitosa del proyecto de titulación.
+
+\subsection{Herramientas y Entorno de Desarrollo}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Git y GitHub desde cero}\\
+    \textcolor{neutralcolor}{\small Control de versiones, manejo de repositorios, branching, commits y colaboración en proyectos.}
+
+    \item \textbf{Markdown y documentación}\\
+    \textcolor{neutralcolor}{\small Sintaxis Markdown para README, documentación de código y reportes técnicos.}
+
+    \item \textbf{Docker y contenedores para ML}\\
+    \textcolor{neutralcolor}{\small Creación de ambientes reproducibles, dockerización de modelos y despliegue containerizado.}
+
+    \item \textbf{Entorno de desarrollo Python}\\
+    \textcolor{neutralcolor}{\small Configuración de ambientes virtuales, gestión de dependencias (pip, conda), notebooks y IDEs.}
+
+    \item \textbf{Google Colab y recursos GPU}\\
+    \textcolor{neutralcolor}{\small Uso efectivo de Colab, gestión de sesiones, acceso a GPU/TPU y mejores prácticas.}
+\end{enumerate}
+
+\subsection{Bibliotecas y Frameworks}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Primeros pasos con Hugging Face}\\
+    \textcolor{neutralcolor}{\small Introducción al ecosistema: Hub, modelos preentrenados, tokenizers y configuración básica.}
+
+    \item \textbf{Introducción a Ollama}\\
+    \textcolor{neutralcolor}{\small Instalación, configuración y ejecución local de modelos de lenguaje.}
+
+    \item \textbf{Uso de Hugging Face}\\
+    \textcolor{neutralcolor}{\small Pipelines, fine-tuning, evaluación de modelos y manejo de datasets.}
+
+    \item \textbf{Casos de uso y personalización de Ollama}\\
+    \textcolor{neutralcolor}{\small Implementación de casos prácticos, customización de modelos y optimización.}
+\end{enumerate}
+
+\subsection{Desarrollo de Aplicaciones}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Pipeline de datos}\\
+    \textcolor{neutralcolor}{\small Preprocesamiento, limpieza, tokenización y manejo eficiente de datasets grandes.}
+
+    \item \textbf{FastAPI para modelos}\\
+    \textcolor{neutralcolor}{\small Creación de APIs REST para servir modelos, endpoints, validación y documentación automática.}
+
+    \item \textbf{Gradio/Streamlit}\\
+    \textcolor{neutralcolor}{\small Desarrollo de interfaces interactivas para demostración de modelos y prototipos.}
+\end{enumerate}
+
+\subsection{Documentación Final}
+
+\begin{enumerate}[leftmargin=*,resume]
+    \item \textbf{Preparación de presentación final (LaTeX)}\\
+    \textcolor{neutralcolor}{\small Estructuración de documentos académicos, manejo de bibliografía, figuras y formato de tesis.}
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\begin{infobox}{Formato de las Ayudantías}
+Las sesiones de ayudantía se llevan a cabo de manera complementaria al curso principal y están diseñadas para:
+\begin{itemize}[leftmargin=*]
+    \item Resolver dudas técnicas específicas sobre implementación
+    \item Proporcionar tutoriales prácticos de herramientas clave
+    \item Ofrecer mentoría personalizada para cada proyecto
+    \item Facilitar la resolución de problemas de código y debugging
+    \item Apoyar en la configuración de ambientes y resolución de dependencias
+\end{itemize}
+\end{infobox}
+
+\newpage
+
 \section{Evaluación del Seminario-Taller}
 
 La evaluación se centra en el \textbf{desarrollo integral del proyecto de titulación} y la \textbf{apropiación de conocimiento} a través de actividades prácticas y teóricas.
@@ -284,10 +358,10 @@ La evaluación se centra en el \textbf{desarrollo integral del proyecto de titul
 \rowcolor{primarycolor}
 \textcolor{white}{\textbf{Actividad}} & \textcolor{white}{\textbf{Fase}} & \textcolor{white}{\textbf{Descripción}} & \textcolor{white}{\textbf{\%}} \\
 \hline
-\textbf{Presentaciones de Papers} & 1--4 &
+\textbf{Presentaciones de Papers} & 1 &
 Análisis crítico y síntesis de artículos relevantes, conectando conceptos teóricos con el proyecto. & 20\% \\
 \hline
-\textbf{Avances del Proyecto} & 1--4 &
+\textbf{Avances del Proyecto} & 2--3 &
 Entregas parciales: definición del problema, implementación baseline, experimentación y despliegue. & 30\% \\
 \hline
 \textbf{Documentación Técnica} & 1--4 &

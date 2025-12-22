@@ -323,10 +323,10 @@ La evaluación se centra en el \textbf{desarrollo del proyecto de titulación} y
 \rowcolor{primarycolor}
 \textcolor{white}{\textbf{Actividad}} & \textcolor{white}{\textbf{Fase}} & \textcolor{white}{\textbf{Descripción}} & \textcolor{white}{\textbf{\%}} \\
 \hline
-\textbf{Presentaciones de Papers} & 1--4 &
+\textbf{Presentaciones de Papers} & 1 &
 Exposición y discusión de artículos científicos asignados. Debe incluir síntesis, análisis crítico y conexión con el proyecto personal. & 20\% \\
 \hline
-\textbf{Avances del Proyecto} & 1--4 &
+\textbf{Avances del Proyecto} & 2--3 &
 Entregas parciales del proyecto en cada fase: (1) Propuesta y análisis de datos, (2) Pipeline y modelo base, (3) Optimización y evaluación, (4) Implementación completa. & 30\% \\
 \hline
 \textbf{Documentación Técnica} & 1--4 &
@@ -360,7 +360,7 @@ El proyecto final debe ser un trabajo completo y de calidad suficiente para serv
 
 \subsection*{Criterios de Evaluación de Presentaciones}
 \begin{itemize}[leftmargin=*]
-    \item Comprensión profunda del artículo presentado
+    \item Comprensión profunda del artículo(s) presentado(s)
     \item Calidad de la síntesis y capacidad de explicar conceptos complejos
     \item Análisis crítico de fortalezas y limitaciones
     \item Conexión con el proyecto personal y aplicabilidad
@@ -377,6 +377,162 @@ El proyecto final debe ser un trabajo completo y de calidad suficiente para serv
     \item Las presentaciones de papers son obligatorias y se asignan rotativamente
     \item Se espera honestidad académica; el plagio resultará en reprobación automática
 \end{itemize}
+
+\newpage
+
+\section*{\faIcon{chalkboard-teacher} Temas de Ayudantía}
+\addcontentsline{toc}{section}{Temas de Ayudantía}
+
+Las sesiones de ayudantía están diseñadas para complementar el contenido teórico del curso con habilidades prácticas y herramientas esenciales para el desarrollo profesional de proyectos de ML. Se organizan en 5 módulos temáticos:
+
+\vspace{0.5cm}
+
+\subsection*{Módulo 1: Fundamentos de Herramientas}
+
+\subsubsection*{1. Git y GitHub desde cero}
+\begin{itemize}[leftmargin=*]
+    \item Conceptos básicos: repositorio, commit, branch, push, pull, merge
+    \item Creación de cuenta GitHub y configuración inicial (SSH keys)
+    \item Primer repositorio: estructura y organización para proyectos de ML
+    \item Archivo \texttt{.gitignore} para proyectos de ML (modelos, datos, checkpoints, \texttt{\_\_pycache\_\_})
+    \item Flujo de trabajo básico: add, commit, push
+    \item Comandos esenciales que se usarán durante el semestre
+    \item Resolución de conflictos comunes
+\end{itemize}
+
+\subsubsection*{2. Markdown y documentación técnica}
+\begin{itemize}[leftmargin=*]
+    \item Sintaxis básica de Markdown: encabezados, listas, código, enlaces, imágenes
+    \item Estructura de un README.md profesional
+    \item Documentación de experimentos y resultados en notebooks
+    \item Plantilla de README para el proyecto del curso
+    \item Tablas y fórmulas matemáticas en Markdown
+    \item GitHub Pages básico (opcional para portafolio personal)
+\end{itemize}
+
+\subsubsection*{3. Entorno de desarrollo Python}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Gestores de paquetes modernos:} \texttt{venv} vs \texttt{uv} (Astral) - ventajas y casos de uso
+    \item Instalación y configuración de \texttt{uv}
+    \item Gestión de dependencias: \texttt{requirements.txt} y \texttt{pyproject.toml}
+    \item Creación de ambientes virtuales con \texttt{uv venv}
+    \item Instalación rápida de paquetes con \texttt{uv pip}
+    \item Jupyter Notebooks vs scripts (\texttt{.py}): cuándo usar cada uno
+    \item Estructura de directorios profesional para proyectos de ML
+    \item Buenas prácticas: nomenclatura, modularización, separación de código y datos
+\end{itemize}
+
+\subsubsection*{4. Google Colab y recursos en la nube}
+\begin{itemize}[leftmargin=*]
+    \item Configuración de Google Colab (gratuito y Pro)
+    \item Conexión con Google Drive para persistencia de datos
+    \item Instalación y gestión de librerías (PyTorch, Hugging Face, etc.)
+    \item Gestión de sesiones y uso eficiente de GPU/TPU
+    \item Límites y mejores prácticas de uso
+    \item Alternativas gratuitas: Kaggle Notebooks, Paperspace Gradient
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Módulo 2: APIs y Servicios Web}
+
+\subsubsection*{5. Consumo de APIs REST}
+\begin{itemize}[leftmargin=*]
+    \item ¿Qué es una API REST? Conceptos fundamentales
+    \item Métodos HTTP: GET, POST, PUT, DELETE
+    \item Librería \texttt{requests} en Python
+    \item Manejo de autenticación y headers
+    \item Procesamiento de respuestas JSON
+    \item Ejemplo práctico: consumo de API pública
+\end{itemize}
+
+\subsubsection*{6. Creación de APIs con FastAPI}
+\begin{itemize}[leftmargin=*]
+    \item Instalación y configuración de FastAPI
+    \item Estructura básica de una aplicación
+    \item Definición de endpoints y modelos de datos (Pydantic)
+    \item Testing local con Uvicorn
+    \item Documentación automática (Swagger UI)
+    \item Integración con modelos de ML
+    \item Consumo de la API desde otras aplicaciones
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Módulo 3: Hugging Face Ecosystem}
+
+\subsubsection*{7. Primeros pasos con Hugging Face}
+\begin{itemize}[leftmargin=*]
+    \item Introducción al ecosistema Hugging Face
+    \item Navegación del Hub de modelos y datasets
+    \item Carga de modelos preentrenados con \texttt{transformers}
+    \item Primeras inferencias: clasificación de imágenes y texto
+    \item Exploración y carga de datasets con \texttt{datasets}
+    \item Autenticación y uso de modelos privados
+\end{itemize}
+
+\subsubsection*{8. Uso avanzado de modelos preentrenados}
+\begin{itemize}[leftmargin=*]
+    \item Fine-tuning vs Transfer Learning: conceptos clave
+    \item Selección del modelo adecuado según la tarea
+    \item Configuración de hiperparámetros
+    \item Uso de \texttt{pipeline} para inferencia rápida
+    \item Optimización de modelos: cuantización y pruning básico
+    \item Manejo de diferentes modalidades (visión, texto, multimodal)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Módulo 4: Despliegue y Producción}
+
+\subsubsection*{9. Docker y contenedores para ML}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Conceptos básicos:} imágenes, contenedores, volúmenes, redes
+    \item Instalación de Docker y Docker Desktop
+    \item Creación de \texttt{Dockerfile} para proyectos de ML
+    \item Gestión de dependencias y layers
+    \item \textbf{Best practices:}
+    \begin{itemize}
+        \item Multi-stage builds para reducir tamaño
+        \item Cache de capas para builds rápidos
+        \item Archivo \texttt{.dockerignore} optimizado
+    \end{itemize}
+    \item Push a Docker Hub o GitHub Container Registry
+    \item Docker Compose para orquestar múltiples servicios
+\end{itemize}
+
+\subsubsection*{10. Despliegue de modelos en producción}
+\begin{itemize}[leftmargin=*]
+    \item Opciones de deployment: Hugging Face Spaces, Render, Railway
+    \item Containerización de API con modelo integrado
+    \item Variables de entorno y configuración
+    \item Monitoreo básico y logs
+    \item Consideraciones de costo y escalabilidad
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection*{Módulo 5: Presentación de Resultados}
+
+\subsubsection*{11. Preparación de la presentación final (LaTeX)}
+\begin{itemize}[leftmargin=*]
+    \item Estructura de presentación técnica
+    \item Visualizaciones efectivas
+    \item Ensayo y retroalimentación
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{infobox}{Objetivo de las Ayudantías}
+Las ayudantías proporcionan una formación práctica integral en herramientas modernas de desarrollo, permitiendo a los estudiantes:
+\begin{itemize}[leftmargin=*]
+    \item Gestionar proyectos de ML de forma profesional
+    \item Trabajar con frameworks y plataformas del estado del arte
+    \item Desplegar modelos en producción
+    \item Documentar y presentar resultados de manera efectiva
+\end{itemize}
+Estas habilidades complementan el contenido teórico del curso y son esenciales para el desarrollo exitoso del proyecto de titulación.
+\end{infobox}
 
 \newpage
 

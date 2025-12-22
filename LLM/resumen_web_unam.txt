@@ -1,0 +1,177 @@
+INTRODUCCIÓN A LOS LARGE LANGUAGE MODELS (LLMs)
+
+Universidad Nacional Autónoma de México
+Facultad de Ciencias
+Materia: Proyecto I
+Carrera: Matemáticas Aplicadas (Plan 2017)
+
+INFORMACIÓN GENERAL
+Grupo: 6012
+Modalidad: Presencial
+Horario: Lunes a Viernes, 17:00 a 18:00
+Profesor: Francisco Peez Carbajal
+Ayudante: Jose Eduardo Rodriuez Barrios
+
+OBJETIVO DEL CURSO
+
+Este seminario-taller tiene como propósito que los estudiantes desarrollen un proyecto de titulación en el área de modelos de lenguaje grande (LLMs), integrando fundamentos teóricos con aplicaciones prácticas. El curso busca fomentar una comprensión profunda de los LLMs, desde su arquitectura hasta su implementación en tareas específicas.
+
+Los estudiantes:
+• Explorarán el estado del arte en modelos de lenguaje, desde enfoques neuronales iniciales hasta los LLMs contemporáneos
+• Diseñarán e implementarán un proyecto aplicado que resuelva una tarea específica (clasificación, generación, resumen, o chatbot)
+• Desarrollarán una solución integral, desde la preparación del corpus hasta el despliegue del modelo
+• Experimentarán con arquitecturas avanzadas y técnicas de ajuste eficiente (LoRA, QLoRA, PEFT)
+• Documentarán su trabajo con rigor técnico y científico, siguiendo estándares académicos
+• Presentarán sus avances y resultados de manera profesional
+
+ALCANCE Y ENFOQUE
+
+El curso cubre el espectro completo de los modelos modernos de lenguaje:
+• Transformers y Arquitectura Base: mecanismos de atención, embeddings y entrenamiento auto-supervisado
+• Modelos fundacionales: BERT, GPT, T5, LLaMA, Falcon, Mistral
+• Fine-tuning eficiente: LoRA, QLoRA, prompt-tuning, adapters
+• Evaluación y fairness: métricas de desempeño, sesgos y responsabilidad ética
+• Aplicaciones: chatbots, clasificación, resumen, generación de texto y RAG (Retrieval-Augmented Generation)
+
+FORMATO DEL CURSO
+
+El curso se estructura como un seminario-taller interactivo, donde:
+• Los estudiantes analizan y presentan artículos científicos clave
+• Se realizan discusiones grupales para conectar conceptos teóricos con aplicaciones prácticas
+• Cada estudiante desarrolla un proyecto individual, con mentoría personalizada
+• Las sesiones incluyen retroalimentación continua para garantizar el progreso del proyecto
+• El proyecto final se diseña para ser un trabajo de titulación con estándares de calidad académica
+
+PRE-REQUISITOS
+
+Conocimientos Matemáticos:
+• Álgebra lineal: vectores, matrices y transformaciones lineales
+• Probabilidad y estadística: nociones básicas
+• Conocimientos de regresión logística y aprendizaje de máquina (deseable)
+
+Habilidades Técnicas:
+• Capacidad para leer artículos técnicos en inglés
+• Programación en Python
+• Familiaridad con herramientas como PyTorch, Hugging Face Transformers, y GitHub
+
+TEMARIO
+
+FASE 1: FUNDAMENTOS Y ESTADO DEL ARTE (Semanas 1-4)
+
+Objetivo: Comprender los principios fundamentales de los LLMs y su evolución histórica
+
+Contenido:
+• Lectura y análisis de papers seminales: Attention is All You Need, BERT, GPT
+• Elaboración de fichas bibliográficas y mapas conceptuales
+• Discusión sobre capacidades emergentes en LLMs a gran escala
+
+Desarrollo del proyecto:
+• Definición del problema y tarea lingüística
+• Recolección y exploración del corpus de texto
+• Configuración del entorno de desarrollo
+• Establecimiento de baselines con modelos preentrenados
+
+FASE 2: PROCESAMIENTO, FINE-TUNING Y EXPERIMENTACIÓN (Semanas 5-8)
+
+Objetivo: Implementar y experimentar con técnicas avanzadas de ajuste eficiente
+
+Contenido:
+• Lectura y análisis de técnicas de tokenización y fine-tuning (LoRA, QLoRA, adapters)
+• Implementación del pipeline de entrenamiento
+• Experimentación con modelos recientes (LLaMA, Falcon, Mistral)
+• Optimización de hiperparámetros y estrategias de validación
+
+Desarrollo del proyecto:
+• Comparación de arquitecturas y técnicas de ajuste eficiente
+• Documentación de resultados y análisis crítico de experimentos
+
+FASE 3: EVALUACIÓN, INTERPRETABILIDAD Y FAIRNESS (Semanas 9-12)
+
+Contenido:
+• Métricas: perplejidad, BLEU, ROUGE, F1, exactitud
+• Interpretabilidad: visualización de atención y saliency maps
+• Fairness y ética: sesgos en LLMs, alucinaciones y uso responsable
+• Análisis de robustez y generalización en diferentes dominios
+
+Desarrollo del proyecto:
+• Evaluación cuantitativa y cualitativa del modelo
+• Análisis de errores y diagnóstico
+• Estudio de sesgos y robustez del modelo
+• Implementación de técnicas de interpretabilidad
+• Comparación con baselines y modelos del estado del arte
+
+FASE 4: DEPLOYMENT, DOCUMENTACIÓN Y PRESENTACIÓN (Semanas 13-16)
+
+Contenido:
+• Despliegue de modelos: APIs con FastAPI, Streamlit o Gradio
+• Técnicas de optimización y compresión (quantization, pruning)
+• Casos de estudio: RAG, agentes y pipelines de inferencia
+• Consideraciones éticas y sostenibilidad de los LLMs
+
+Desarrollo del proyecto:
+• Selección y optimización del modelo final
+• Implementación de un demo funcional (API/chatbot/app)
+• Aplicación de técnicas de compresión y optimización
+• Elaboración del reporte técnico (formato de tesis, 50-80 páginas)
+• Presentación final y defensa del proyecto
+
+TEMAS DE AYUDANTÍA
+
+Herramientas y Entorno:
+1. Git y GitHub desde cero
+2. Markdown y documentación
+3. Docker y contenedores para ML
+4. Entorno de desarrollo Python
+5. Google Colab y recursos GPU
+
+Bibliotecas y Frameworks:
+6. Primeros pasos con Hugging Face
+7. Introducción a Ollama
+8. Uso avanzado de Hugging Face
+9. Casos de uso y personalización de Ollama
+
+Desarrollo de Aplicaciones:
+10. Pipeline de datos
+11. FastAPI para modelos
+12. Gradio/Streamlit
+
+Documentación Final:
+13. Preparación de presentación final (LaTeX)
+
+EVALUACIÓN
+
+La evaluación se centra en el desarrollo integral del proyecto de titulación y la apropiación de conocimiento.
+
+Distribución:
+• Presentaciones de Papers (Fase 1): 20%
+  Análisis crítico y síntesis de artículos relevantes, conectando conceptos teóricos con el proyecto
+
+• Avances del Proyecto (Fases 2-3): 30%
+  Entregas parciales: definición del problema, implementación baseline, experimentación y despliegue
+
+• Documentación Técnica (Fases 1-4): 20%
+  Reporte progresivo con estructura de tesis, incluyendo metodología, experimentos y análisis
+
+• Proyecto Final (Fase 4): 30%
+  Producto funcional completo: modelo entrenado, sistema desplegado y presentación profesional
+
+Componentes del Proyecto de Titulación:
+1. Revisión bibliográfica exhaustiva del estado del arte en LLMs
+2. Planteamiento del problema específico en procesamiento de lenguaje natural
+3. Metodología detallada incluyendo preprocesamiento, arquitectura y fine-tuning
+4. Implementación completa y reproducible (repositorio GitHub documentado)
+5. Experimentación rigurosa comparando diferentes enfoques y técnicas
+6. Evaluación completa incluyendo métricas, interpretabilidad y análisis de sesgos
+7. Sistema desplegado funcional (API, chatbot o aplicación web)
+8. Documentación técnica completa con formato de tesis (50-80 páginas)
+9. Análisis ético y consideraciones de uso responsable
+
+POLÍTICAS DEL CURSO
+
+• Calificación mínima aprobatoria: 60%
+• Asistencia mínima requerida: 80%
+• Los avances deben entregarse en las fechas establecidas
+• El proyecto es individual, aunque se fomenta la discusión colaborativa
+• Cada estudiante debe mantener un repositorio de GitHub actualizado
+• Las presentaciones de papers son obligatorias y se asignan rotativamente
+• Se requiere honestidad académica; el plagio resultará en reprobación automática
