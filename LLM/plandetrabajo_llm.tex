@@ -1,0 +1,125 @@
+\documentclass[a4paper,twocolumn,10pt]{article}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{verbatim}
+\geometry{a4paper,
+width=19cm,
+height=28cm,
+top=.5cm,
+right=1.5cm,
+left=1.5cm,
+includeall
+}
+\setlength{\columnsep}{2cm}
+
+\setlength{\parindent}{0cm}
+
+\title{
+\includegraphics[scale=0.176]{Escudo-facultad-ciencias-unam.png}\hspace{2cm}
+\begin{minipage}[b]{8.4cm}
+\begin{flushleft}
+\normalsize{\scshape Universidad Nacional Autónoma de México\linebreak}
+{\scshape Facultad de Ciencias\linebreak}
+{\scshape Proyecto I\linebreak}
+{\scshape Introducción a los Large Language Models (LLMs)\linebreak}
+{\scshape Plan de Trabajo}
+\end{flushleft}
+\end{minipage}
+\vspace{.5cm}
+\hrule height1pt\vspace{.1cm}
+\hrule height1pt
+\date{}
+}
+
+\renewcommand{\baselinestretch}{1.3}
+\begin{document}
+\maketitle
+
+\begin{flushleft}
+\textbf{Datos del curso}
+\end{flushleft}
+
+\noindent \textit{Semestre:} 2026-2
+
+\noindent \textit{Grupo:} 6012
+
+\noindent \textit{Profesor:} Francisco Pérez Carbajal
+
+\noindent \textit{e-mail:} \href{mailto:franciscop@ciencias.unam.mx}{franciscop@ciencias.unam.mx}
+
+\noindent \textit{Ayudante:} 
+
+\noindent \textit{Horario de clases:} Lunes a Viernes de 17:00--18:00
+
+\begin{flushleft}
+\textbf{Objetivo del Seminario-Taller}
+\end{flushleft}
+
+Este seminario-taller tiene como propósito que los estudiantes \textbf{desarrollen un proyecto de titulación} en el área de \textbf{Modelos de Lenguaje Grande (LLMs)}, integrando fundamentos teóricos con aplicaciones prácticas. El curso busca formar una comprensión sólida de los LLMs: su arquitectura (Transformers), sus técnicas de adaptación (fine-tuning eficiente) y su implementación en tareas reales de PLN (por ejemplo: clasificación, resumen, generación o chatbots).
+
+A través de la lectura crítica de artículos científicos, la síntesis de conocimiento especializado y el desarrollo práctico de un proyecto, los estudiantes:
+\begin{itemize}
+\item Exploran el estado del arte en modelos de lenguaje, desde modelos fundacionales hasta LLMs contemporáneos.
+\item Diseñan e implementan un proyecto aplicado, desde la preparación del corpus hasta la evaluación y el despliegue.
+\item Documentan y presentan resultados con rigor técnico y estándares académicos.
+\end{itemize}
+
+\vspace{2\baselineskip}
+
+\begin{flushleft}
+\textbf{Temario Sintético}
+\end{flushleft}
+
+El curso está dividido en cuatro fases principales:
+\begin{enumerate}
+\item \textbf{Fase 1: Fundamentos y Estado del Arte.} Arquitectura Transformer, atención, embeddings, entrenamiento auto-supervisado. Revisión de modelos fundacionales (BERT/GPT/T5/LLaMA/Mistral). Definición del problema del proyecto.
+\item \textbf{Fase 2: Datos, Fine-tuning y Experimentación.} Curación del corpus, tokenización y pipelines. Ajuste eficiente (LoRA/QLoRA/PEFT), entrenamiento y validación. Comparación de enfoques y registro de experimentos.
+\item \textbf{Fase 3: Evaluación, Interpretabilidad y Fairness.} Métricas (F1/ROUGE/BLEU/perplejidad según el problema), análisis de errores, robustez, sesgos y uso responsable. Interpretabilidad y diagnóstico del modelo.
+\item \textbf{Fase 4: Deployment y Documentación.} Integración del modelo en un demo funcional (API/Chatbot/App), optimización (quantization/pruning si aplica), reporte técnico con formato de tesis y presentación final.
+\end{enumerate}
+
+\newpage
+
+\begin{flushleft}
+\textbf{Evaluación}
+\end{flushleft}
+
+La evaluación del curso se basa en los siguientes componentes:
+\begin{itemize}
+\item \textbf{Presentaciones de Artículos Científicos (20\%):} Exposición y análisis crítico de artículos asignados, conectando conceptos con el proyecto.
+\item \textbf{Avances del Proyecto (30\%):} Entregas parciales por fase (definición del problema, baseline, experimentación, evaluación y despliegue).
+\item \textbf{Documentación Técnica (20\%):} Reporte progresivo con estructura tipo tesis (metodología, experimentos y análisis).
+\item \textbf{Proyecto Final (30\%):} Entrega integral del sistema (código, modelo, demo/API y presentación profesional).
+\end{itemize}
+
+\noindent Para aprobar el curso, se requiere una asistencia mínima del 80\% y una calificación final de al menos 60\%. El proyecto es individual y debe estar documentado en un repositorio de GitHub.
+
+\begin{flushleft}
+\textbf{Pre-requisitos}
+\end{flushleft}
+
+\noindent \textbf{Matemáticos:} Álgebra lineal, probabilidad y estadística. Conocimientos de aprendizaje de máquina / regresión logística (deseable).
+
+\noindent \textbf{Técnicos:} Lectura técnica en inglés, programación en Python, familiaridad con Git/GitHub. Deseable experiencia con PyTorch y/o Hugging Face.
+
+\noindent \textbf{Herramientas:} Google Classroom, repositorio GitHub.
+
+\begin{flushleft}
+\textbf{Inscripción a Google Classroom}
+\end{flushleft}
+
+Para inscribirse al curso en Google Classroom, sigue estos pasos:
+\begin{enumerate}
+\item Accede a \href{https://classroom.google.com}{classroom.google.com} con tu cuenta.
+\item Haz clic en el botón \textbf{+} en la esquina superior derecha.
+\item Selecciona \textbf{Unirse a una clase}.
+\item Ingresa el código de la clase: \textbf{3orn6756}
+\item Haz clic en \textbf{Unirse}.
+\end{enumerate}
+
+\noindent En Google Classroom se publicarán anuncios, materiales, asignaciones y entregas.
+
+\end{document}
