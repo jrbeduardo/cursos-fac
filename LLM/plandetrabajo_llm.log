@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.16)  11 JAN 2026 20:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.11.16)  28 JAN 2026 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -413,37 +413,37 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Warning: No \author given.
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 78--79
+Underfull \hbox (badness 1189) in paragraph at lines 80--81
 []\OT1/cmr/bx/n/10 Fase 1: Fun-da-men-tos y Es-ta-do del
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 \OT1/cmr/bx/n/10 Ar-te. \OT1/cmr/m/n/10 Ar-qui-tec-tu-ra Trans-for-mer, aten-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 \OT1/cmr/m/n/10 ci^^Son, em-bed-dings, en-tre-na-mien-to auto-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 \OT1/cmr/m/n/10 na-les (BERT/GPT/T5/LLaMA/Mistral).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 []\OT1/cmr/bx/n/10 Fase 3: Eva-lua-ci^^Son, In-ter-pre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 \OT1/cmr/bx/n/10 ta-bi-li-dad y Fair-ness. \OT1/cmr/m/n/10 M^^Setri-cas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 \OT1/cmr/m/n/10 (F1/ROUGE/BLEU/perplejidad seg^^Sun
  []
 
@@ -452,11 +452,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  <./Escudo-facultad-ciencias-unam.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 92.
+(Font)              <7> on input line 94.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 92.
+(Font)              <5> on input line 94.
 
-Underfull \hbox (badness 1831) in paragraph at lines 104--105
+Underfull \hbox (badness 1831) in paragraph at lines 106--107
 \OT1/cmr/m/n/10 es-tad^^S^^Psti-ca. Co-no-ci-mien-tos de apren-di-za-je de
  []
 
@@ -474,7 +474,7 @@ Package rerunfilecheck Info: File `plandetrabajo_llm.out' has not changed.
 Here is how much of TeX's memory you used:
  10355 strings out of 474486
  167334 string characters out of 5739034
- 1942542 words of memory out of 5000000
+ 1943542 words of memory out of 5000000
  32524 multiletter control sequences out of 15000+600000
  562059 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -484,9 +484,9 @@ sfonts/cm/cmbx10.pfb><C:/Users/jose.rodriguezb/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/jose.rodriguezb/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jose.rodri
 guezb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on plandetrabajo_llm.pdf (2 pages, 140058 bytes).
+Output written on plandetrabajo_llm.pdf (2 pages, 140306 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
+ 52 PDF objects out of 1000 (max. 8388607)
  12 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
